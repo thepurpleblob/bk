@@ -1,32 +1,38 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Header></Header>
     <router-view/>
+    <Footer></Footer>
   </div>
 </template>
 
+<script>
+    import Header from '@/components/Header.vue';
+    import Footer from '@/components/Footer.vue';
+
+    export default {
+      components: {
+          Header,
+          Footer,
+      }
+    }
+</script>
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+    @font-face {
+        font-family: "Moma";
+        src: url('~@/assets/fonts/Moma.woff') format('woff');
+        font-weight: normal;
+    }
 
-#nav {
-  padding: 30px;
-}
+    @font-face {
+        font-family: "Moma";
+        src: url('~@/assets/fonts/MoMABoldRegular.woff') format('woff');
+        font-weight: bold;
+    }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+    #app {
+        font-family: 'Moma';
+    }
 </style>
