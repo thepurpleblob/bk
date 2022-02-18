@@ -19,9 +19,9 @@
             </ul>
         </div>  
         <ul class="mt-3 list-inline">
-            <li class="list-inline-item"><router-link class="link-light" to="/terms">Terms & conditions</router-link></li>
-            <li class="list-inline-item"><router-link class="link-light" to="/dp">Data protection policy</router-link></li>
-            <li class="list-inline-item"><router-link class="link-light" to="/company">Company details</router-link></li>
+            <li class="list-inline-item"><router-link class="link-light" to="/page/terms">Terms & conditions</router-link></li>
+            <li class="list-inline-item"><router-link class="link-light" to="/page/dp">Data protection policy</router-link></li>
+            <li class="list-inline-item"><router-link class="link-light" to="/page/company">Company details</router-link></li>
         </ul>
     </div> 
 </template>

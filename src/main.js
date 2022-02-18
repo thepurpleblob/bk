@@ -2,9 +2,11 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import VCalendar from 'v-calendar'
+import VModal from 'vue-js-modal'
+//import 'bootstrap/dist/css/bootstrap.min.css'
+import '@/assets/scss/bkr.scss'
 import 'bootstrap/dist/js/bootstrap.js'
-import '@/assets/fonts/Moma.woff'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret, faEnvelope, faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookSquare, faInstagramSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
@@ -18,6 +20,9 @@ library.add(faUserSecret, faEnvelope, faPhoneSquareAlt, faFacebookSquare, faInst
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
+
+Vue.use(VCalendar)
+Vue.use(VModal)
 
 new Vue({
   router,

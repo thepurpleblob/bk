@@ -9,19 +9,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item border-bottom border-3 ms-3">
+                    <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/')}">
                         <router-link class="nav-link px-0" aria-current="page" to="/">Home</router-link>
                     </li>
-                    <li class="nav-item border-bottom border-3 ms-3">
+                    <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/fares')}">
                         <router-link class="nav-link px-0" to="/fares">Fares &amp; Tickets</router-link>
                     </li>
-                    <li class="nav-item border-bottom border-3 ms-3">
+                    <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/plan')}">
                         <router-link class="nav-link px-0" to="/plan">Plan your visit</router-link>
                     </li>
-                    <li class="nav-item border-bottom border-3 ms-3">
+                    <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/events')}">
                         <router-link class="nav-link px-0" to="/events">Events</router-link>
                     </li>
-                    <li class="nav-item border-bottom border-primary border-3 ms-3">
+                    <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/about')}">
                         <router-link class="nav-link px-0" to="/about">About us</router-link>
                     </li>
                 </ul>
@@ -35,6 +35,11 @@
         name: 'Header',
         props: {
             
+        },
+        methods: {
+            isActive: function(path) {
+                return (path == this.$route.path);
+            }
         }
     }
 </script>
