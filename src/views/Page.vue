@@ -22,8 +22,6 @@ export default {
         update: function() {
             const url = process.env.VUE_APP_ENDPOINT;
 
-            window.console.log(this.$route.params);
-        
             // Get front page items
             //const v = this;
             const slug = this.$route.params.slug;
@@ -33,7 +31,6 @@ export default {
                 const pages = response.data.data;
                 if (pages.length !== 0) {
                     const page = pages[0];
-                    window.console.log(page);
                     v.content = page.Content;
                 } else {
                     window.console.log('Error 404');
