@@ -110,6 +110,7 @@ export default {
                             title: title,
                             color: color,
                             info: info,
+                            servicecount: services.length,
                         },
                         {
                             adaptive: true,
@@ -190,5 +191,9 @@ export default {
 
     .dot-orange {
         background-color: #fd7e14;
+    }
+
+    .dot-pink {
+        background-color: #d63384;
     }
 </style>

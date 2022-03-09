@@ -1,6 +1,9 @@
 <template>
-    <div class="page">
-        <div class="pagecontent container-fluid" v-html="content"></div>
+    <div class="page py-2">
+        <div class="container-fluid">
+            <h2>{{ title }}</h2>
+        </div>
+        <div class="pagecontent container-fluid fs-5" v-html="content"></div>
     </div>
 </template>
 
@@ -14,6 +17,7 @@ export default {
     },
     data: function() {
         return {
+            title: '',
             content: '',
             blockstyle: '',
         }
@@ -23,14 +27,14 @@ export default {
             const url = process.env.VUE_APP_ENDPOINT;
 
             // Get front page items
-            //const v = this;
-            const slug = this.$route.params.slug;
+                             const slug = this.$route.params.slug;
             const v = this;
             axios.get(url + '/Page?filter={ "status": {"_eq": "published"}, "slug": {"_eq": "' + slug + '"}}')
             .then(response => {
                 const pages = response.data.data;
                 if (pages.length !== 0) {
                     const page = pages[0];
+                    v.title = page.Title;
                     v.content = page.Content;
                 } else {
                     window.console.log('Error 404');
@@ -54,7 +58,7 @@ export default {
 </script>
 
 <style>
-    .fp-block img {
+    .page img {
         display: inline-block;
         border-radius: 5px;
         max-width: 100%;

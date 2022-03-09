@@ -1,9 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <router-link class="navbar-brand" to="/">
                 <img src="@/assets/bklogo.png" alt="BKR Logo" />
-            </a>
+            </router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
             </button>
@@ -22,7 +22,7 @@
                         <router-link class="nav-link px-0" to="/events">Events</router-link>
                     </li>
                     <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/about')}">
-                        <router-link class="nav-link px-0" to="/about">About us</router-link>
+                        <router-link class="nav-link px-0" to="/page/about">About us</router-link>
                     </li>
                 </ul>
             </div>

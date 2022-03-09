@@ -1,5 +1,5 @@
 <template>
-    <div id="timetable" class="container-fluid"> 
+    <div id="timetable" class="container-fluid py-1"> 
         <p class="mt-2 text-center text-uppercase"><b>{{ title }} TIMETABLE</b></p>
         <table v-if="services" class="table table-striped table-sm table-responsive border border-4 rounded-2" :style="modalColor">
             <tbody>
@@ -46,7 +46,7 @@
                         {{ service.UpManuel }}
                     </td>
                 </tr>
-                <tr><td>&nbsp;</td></tr>
+                <tr><td :colspan="servicecount+2">&nbsp;</td></tr>
                 <tr>
                     <th>
                         Manuel
@@ -88,6 +88,10 @@
 
         <div v-if="info" v-html="info" class="alert alert-info text-center"></div>
 
+        <div class="text-end">
+            <button type="button" class="btn btn-primary" @click="$emit('close')">Close</button>
+        </div>
+
     </div> 
 </template>
 
@@ -110,7 +114,11 @@
             info: {
                 type: String,
                 required: false,
-            }
+            },
+            servicecount: {
+                type: Number,
+                required: true,
+            },
         },
         computed: {
             modalColor() {
