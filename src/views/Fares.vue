@@ -110,7 +110,7 @@ export default {
                             title: title,
                             color: color,
                             info: info,
-                            servicecount: services.length,
+                            servicecount: services != null ? services.length : 0,
                         },
                         {
                             adaptive: true,
@@ -123,8 +123,8 @@ export default {
         },
         toPage: function(page) {
             // (isPopulated is critical for this to be called with data)
-            window.console.log(page);
-            window.console.log(this.events);
+            //window.console.log(page);
+            //window.console.log(this.events);
             const yearmonth = page.year.toString() + '-' + page.month.toString().padStart(2, '0');
             const labels = [];
             this.events.forEach(event => {
@@ -151,7 +151,7 @@ export default {
                 }
             });
             this.labels = labels;
-            window.console.log(this.labels);
+            //window.console.log(this.labels);
         }
     },
     mounted: function() {

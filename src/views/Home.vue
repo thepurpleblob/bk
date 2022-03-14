@@ -1,8 +1,15 @@
 <template>
     <div class="home">
         <div :style="item.style"  v-for="item in items" :key="item.id">
-            <div class="container-fluid py-4 fp-block">
-                <div class="fpcontent" v-html="item.content"></div>
+            
+            <div class="row">
+                <div class="col">
+                    <img class="px-2 rounded" :src="assets + item.Picture" />
+                </div>
+                <div class="col">
+                    <h2 class="text-center">{{ item.title }}</h2>
+                    <div class="fpcontent" v-html="item.content"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -20,10 +27,12 @@ export default {
         return {
             items: [],
             blockstyle: '',
+            assets: '',
         }
     },
     mounted: function() {
         const url = process.env.VUE_APP_ENDPOINT;
+        this.assets = process.env.VUE_APP_ASSETS + '/';
         
         // Get front page items
         const v = this;

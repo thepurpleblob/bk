@@ -13,7 +13,7 @@
                         <router-link class="nav-link px-0" aria-current="page" to="/">Home</router-link>
                     </li>
                     <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/fares')}">
-                        <router-link class="nav-link px-0" to="/fares">Fares &amp; Tickets</router-link>
+                        <router-link class="nav-link px-0" to="/fares">Timetables</router-link>
                     </li>
                     <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/plan')}">
                         <router-link class="nav-link px-0" to="/plan">Plan your visit</router-link>
@@ -25,8 +25,12 @@
                         <router-link class="nav-link px-0" to="/page/about">About us</router-link>
                     </li>
                 </ul>
+                <div class="pe-2 text-center">
+                    <a href="https://bkrailway.digitickets.co.uk"><img width="150px" src="@/assets/Click-for-tickets.png" alt="Book your Tickets" /></a>
+                </div>
             </div>
         </div>
+
     </nav>   
 </template>
 
