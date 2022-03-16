@@ -27,9 +27,15 @@ export default {
             const url = process.env.VUE_APP_ENDPOINT;
 
             // Get front page items
-                             const slug = this.$route.params.slug;
+            const slug = this.$route.params.slug;
             const v = this;
-            axios.get(url + '/Page?filter={ "status": {"_eq": "published"}, "slug": {"_eq": "' + slug + '"}}')
+            let filter = '';
+            if (isNaN(slug)) {
+                filter = '/Page?filter={ "status": {"_eq": "published"}, "slug": {"_eq": "' + slug + '"}}';
+            } else {
+                filter = '/Page?filter={ "status": {"_eq": "published"}, "id": {"_eq": "' + slug + '"}}'
+            }
+            axios.get(url + filter)
             .then(response => {
                 const pages = response.data.data;
                 if (pages.length !== 0) {

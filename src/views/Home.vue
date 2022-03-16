@@ -1,14 +1,16 @@
 <template>
     <div class="home">
-        <div :style="item.style"  v-for="item in items" :key="item.id">
-            
-            <div class="row">
-                <div class="col">
-                    <img class="px-2 rounded" :src="assets + item.Picture" />
+        <div :style="item.style"  v-for="item in items" :key="item.id" class="rounded-2">    
+            <div class="row mb-4 rounded-2">
+                <div class="col-8">
+                    <img class="item-img img-fluid" :src="assets + item.Picture" />
                 </div>
-                <div class="col">
-                    <h2 class="text-center">{{ item.title }}</h2>
-                    <div class="fpcontent" v-html="item.content"></div>
+                <div class="col-4">
+                    <h2 class="mt-3">{{ item.title }}</h2>
+                    <p>{{ item.tagline }}</p>
+                    <p v-if="item.More">
+                        <a :href="item.morelink">Read more...</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -47,7 +49,8 @@ export default {
                 if (item.textcolor) {
                     style += 'color: ' + item.textcolor + '; ';
                 }
-                item.style = style;   
+                item.style = style;
+                item.morelink = '/page/' + item.More;
             });
             v.items = items;
         })
@@ -64,4 +67,7 @@ export default {
         padding-right: 5px;
     }
 
+    .item-img {
+        min-height: 400px;
+    }
 </style>
