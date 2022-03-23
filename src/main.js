@@ -8,11 +8,20 @@ import VModal from 'vue-js-modal'
 import '@/assets/scss/bkr.scss'
 import 'bootstrap/dist/js/bootstrap.js'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret, faEnvelope, faPhoneSquareAlt } from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret, faEnvelope, faPhoneSquareAlt, faTicketAlt, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 import { faFacebookSquare, faInstagramSquare, faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faUserSecret, faEnvelope, faPhoneSquareAlt, faFacebookSquare, faInstagramSquare, faTwitterSquare)
+library.add(
+    faUserSecret,
+    faEnvelope,
+    faPhoneSquareAlt,
+    faFacebookSquare,
+    faInstagramSquare,
+    faTwitterSquare,
+    faTicketAlt,
+    faCalendarAlt
+)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
