@@ -14,8 +14,8 @@
         </div>
         <div class="mt-3">
             <ul class="list-unstyled">
-                <li><font-awesome-icon class="pe-1" size="2x" icon="phone-square-alt"/> 01506 825855</li>
-                <li><font-awesome-icon class="pe-1" size="2x" icon="envelope"/> enquiries.railway@srps.org.uk</li>
+                <li><font-awesome-icon class="fa-fw pe-1" size="2x" icon="phone-square-alt"/> <a class="link-light text-decoration-none" href="tel:01506 825855">01506 825855</a></li>
+                <li><font-awesome-icon class="fa-fw pe-1" size="2x" icon="envelope"/> <a class="link-light text-decoration-none" href="mailto:enquiries.railway@srps.org.uk">enquiries.railway@srps.org.uk</a></li>
             </ul>
         </div>  
         <ul class="mt-3 list-inline">
