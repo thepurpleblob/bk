@@ -1,13 +1,14 @@
 <template>
-    <div class="py-4">
+    <div class="py-4 container">
         <v-calendar v-if="isPopulated" is-expanded :attributes="attributes" color="blue" v-on:dayclick="onDayclick" v-on:update:from-page="toPage"></v-calendar>
         <div class="row py-4">
             <div v-for="label in labels" :key="label.title" class="col">
                 <span class="dot rounded-circle" :class="label.color"></span> {{ label.title }}
             </div>
-        </div>
-
-            
+            <div v-if="!isEvents" class="alert alert-dark">
+                There are no services in this month
+            </div>
+        </div>           
     </div>
 </template>
 
@@ -52,6 +53,7 @@ export default {
         return {
             content: '',
             isPopulated: false,
+            isEvents: false,
             events: [],
             blockstyle: '',
             attributes: [],
@@ -62,7 +64,7 @@ export default {
         update: function() {
             const url = process.env.VUE_APP_ENDPOINT;
 
-            // Get front page items
+            // Get event items
             const v = this;
             const sendCalendarRequest = async() => {
                 try {
@@ -127,8 +129,10 @@ export default {
             //window.console.log(this.events);
             const yearmonth = page.year.toString() + '-' + page.month.toString().padStart(2, '0');
             const labels = [];
+            this.isEvents = false;
             this.events.forEach(event => {
                 if ((event.date.slice(0, 7) == yearmonth) && (event.Color != null) && (event.Title != null)) {
+                    this.isEvents = true;
                     if (event.SpecialEvent) {
                         if (!labels.find(label => {
                             return label.title == event.Title;
