@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Page from '../views/Page.vue'
 import Fares from '../views/Fares.vue'
 import Plan from '../views/Plan.vue'
+import Events from '../views/Events.vue'
 
 Vue.use(VueRouter)
 
@@ -35,6 +36,11 @@ const routes = [
     path: '/plan',
     name: 'Plan',
     component: Plan,
+  },
+  {
+    path: '/events',
+    name: 'Events',
+    component: Events,
   }
 ]
 
