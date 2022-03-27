@@ -1,18 +1,18 @@
 <template>
     <div class="home container-fluid">
 
-        <div v-for="item in items" :key="item.id" class="row my-4 border">
-            <div v-if="!item.isleft" id="oldfashioned" class="col-sm-6 col-lg-7 p-4 d-none d-sm-grid">
+        <div v-for="item in items" :key="item.id" class="row my-4 border" :style="item.rowstyle">
+            <div v-if="!item.isleft" id="oldfashioned" class="col-sm-6 col-lg-7 p-4 d-none d-sm-grid" :style="item.imagestyle">
 
             </div>
-            <div class="col-12 col-sm-6 col-lg-5 bg-dark text-light p-4">
+            <div class="col-12 col-sm-6 col-lg-5 p-4 text-center">
                 <h1>{{ item.Title }}</h1>
                 <div v-html="item.Content"></div>
                 <div class="mt-2">
                     <router-link class="btn btn-outline-light" to="/page/greatdayout">Find out more...</router-link>
                 </div>
             </div>
-            <div v-if="item.isleft" id="oldfashioned" class="col-sm-6 col-lg-7 p-4 d-none d-sm-grid">
+            <div v-if="item.isleft" id="oldfashioned" class="col-sm-6 col-lg-7 p-4 d-none d-sm-grid" :style="item.imagestyle">
 
             </div>
         </div>
@@ -61,8 +61,20 @@ export default {
         axios.get(url + '/Events?filter={ "status": { "_eq": "published" }}')
         .then(response => {
             const items = response.data.data;
+    window.console.log(items);
             let isleft = true;
             items.forEach(item => {
+                item.rowstyle = {
+                    "background-color": item.Background,
+                    "color": item.TextColour,
+                };
+                item.imagestyle = {
+                    "background-image": "url(" + v.assets + item.Image + ")",
+                    "height": "340px",
+                    "background-repeat": "no-repeat",
+                    "background-size": "contain",
+                    "background-position": isleft ? "right" : "left",
+                };
                 let style = '';
                 if (item.backgroundcolor) {
                     style += 'background: ' + item.backgroundcolor + '; ';
@@ -82,16 +94,6 @@ export default {
 </script>
 
 <style>
-    #oldfashioned {
-        background-image: url('~@/assets/banner-birkhill-2016.jpeg');
-        height: 340px;
-    }
-
-    #faresandtickets {
-        background-image: url('~@/assets/banner-boness-view1.jpeg');
-        height: 340px;
-    }
-
     .list-icon {
         font-size: 2rem;
         vertical-align: middle;
