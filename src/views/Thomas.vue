@@ -1,0 +1,195 @@
+<template>
+    <div id="ThomasPage" class="home container-fluid">
+        <h1>Day Out With Thomas</h1>
+
+        <h2>Dates, Prices and Tickets</h2>
+
+        <div class="row mb-2">
+            <div class="col">
+                <img src="~@/assets/DOWT1_scaled.jpg" alt="DOWT Family" />
+            </div>
+            <div class="col">
+                <small><i>Image by Paul Michael Hughes Photography<br />
+                    <ul class="list-unstyled">
+                        <li><font-awesome-icon  icon="phone-square-alt"/> <a href="tel:07790819111"> 07790819111 UK</a></li>
+                        <li><font-awesome-icon icon="envelope"/> <a href="mailto:pmh@paulmichaelhughes.com">pmh@paulmichaelhughes.com</a></li>
+                        <li><font-awesome-icon icon="globe"/> <a href="https://www.paulmichaelhughes.com">www.paulmichaelhughes.com</a></li>
+                    </ul>
+                </i></small>
+            </div>
+        </div>
+
+        <h2 class="text-center mt-2">
+            We are delighted to welcome visitors to a Day Out With Thomas™ in 2022. 
+        </h2>
+
+        <div class="accordion mb-4" id="accordionFAQ">
+            <div v-for="item in items" :key="item.n" class="accordion-item">
+                <h2 class="accordion-header" :id="'heading' + item.n">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" :data-bs-target="'#collapse' + item.n" aria-expanded="false" :aria-controls="'collapse' + item.n">
+                    {{ item.q }}
+                </button>
+                </h2>
+                <div :id="'collapse' + item.n" class="accordion-collapse collapse" :aria-labelledby="'heading' + item.n" data-bs-parent="#accordionFAQ">
+                <div class="accordion-body">
+                    <span v-html="item.a"></span>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</template>
+
+<script>
+
+export default {
+    name: 'Thomas',
+    components: {
+      
+    },
+    data: function() {
+        return {
+            items: [
+                {
+                    n: "One",
+                    q: "Will Thomas be there?",
+                    a: "Yes, Thomas will pull your train to Birkhill and back.",
+                },
+                {
+                    n: "Two",
+                    q: "Are the Thomas Rides unlimited?",
+                    a: "No, you must have a ticket for a pre-booked time slot.",
+                },
+                {
+                    n: "Three",
+                    q: "How long is the Thomas train ride?",
+                    a: `The journey from Bo’ness to Birkhill is approximately 20 minutes. 
+                        The train will stop at Birkhill for visitors to have a short comfort break before travelling back to Bo’ness. 
+                        The total return journey time including the short break is approximately 50 minutes.`,
+                },
+                {
+                    n: "Four",
+                    q: "What does my Day Out With Thomas ticket include?",
+                    a: `Your ticket includes all the activities included in the What’s Included section above.
+                        *Exact details of entertainment subject to availability and change.`
+                },
+                {
+                    n: "Five",
+                    q: "What time should I plan to arrive?",
+                    a: `Activities are available to visitors from 09:30 until 16:30.
+                        Please arrive at least 15 minutes before your pre-booked time slot. (this is printed on your e-ticket).`
+                },
+                {
+                    n: "Six",
+                    q: "Can I bring my dog?",
+                    a: "We regret that dogs (except assistance dogs) are not allowed at this event.",
+                },
+                {
+                    n: "Seven",
+                    q: "Do I have to book in advance?",
+                    a: `Yes, <a href="https://www.quaytickets.com/dayoutwiththomas/en-GB/shows/day%20out%20with%20thomas%20at%20bo%27ness%20and%20kinneil%20railway/events">
+                        you should book your tickets online</a>. Under 2s are free but will not be entitled to a seat,
+                        please be aware that every seat in your coach could be sold out so we appreciate your co-operation with this.`
+                },
+                {
+                    n: "Eight",
+                    q: "How will I receive my tickets?",
+                    a: `All Day Out With Thomas tickets are issued as e-tickets.
+                        Your confirmation email will include a PDF attachment – these are your e-tickets.
+                        Please either print at home or have the PDF ready to show on your mobile device at the entrance.`
+                },
+                {
+                    n: "Nine",
+                    q: "Is there somewhere to get something to eat?",
+                    a: `Treat yourself to a meal in the Station Buffet or enjoy a picnic at one of our dedicated picnic areas.`
+                },
+                {
+                    n: "Ten",
+                    q: "Do you have a gift shop?",
+                    a: "Yes at Bo’ness Station."
+                },
+                {
+                    n: "Eleven",
+                    q: "How do we get to you?",
+                    a: `We are under an hour’s drive from Edinburgh and Glasgow. The postcode to locate us is EH51 9AQ.`
+                },
+                {
+                    n: "Twelve",
+                    q: "Can I visit without buying a ticket?",
+                    a: `No, you must have a valid ticket to gain access to the railway site.`
+                },
+                {
+                    n: "Thirteen",
+                    q: "Where do the main event activities take place?",
+                    a: `The event is based at Bo’ness at the Station and the Museum Of Scottish Railways.
+                        Your Thomas train goes to Birkhill Station where there will be a short break before the train takes you back to Bo’ness.
+                        There will be no entertainment at Birkhill Station this year as we are delighted to be able to use our Visitor Trails,
+                        Museum of Scottish Railways and brand-new Engineering Workshop Viewing Gallery to expand the visitor experience.`
+                },
+                {
+                    n: "Fourteen",
+                    q: "What’s the difference between Standard Seats and Private Compartments?",
+                    a: `Standard Seats are arranged in 4s, usually with a table in the middle.
+                        They are in carriages that you will share with other visitors.
+                        Perspex screens are provided between each set of 4 seats however social distancing is not
+                        planned unless the Scottish Government guidance changes.
+                        Private Compartments are separate areas of the train which can seat up to 6 people.
+                        These are sold as one ticket and are ideal for large groups.`
+                },
+                {
+                    n: "Fifteen",
+                    q: "Are there toilets on the train?",
+                    a: `Yes, along with toilet facilities at our Museum and each station,
+                        including baby changing and disabled facilities at Bo’ness.`
+                },
+                {
+                    n: "Sixteen",
+                    q: "Is there room for pushchairs, prams and buggies?",
+                    a: `Space on our trains is very limited so we offer a free buggy park* at Bo’ness Station
+                        where you can leave your pushchair, pram or buggy while you travel to Birkhill and back.
+                        Alternatively, access to and from the event site is permitted throughout the day
+                        (please ensure you carry your Day Out With Thomas event ticket with you at all times) should you prefer to leave your pushchair,
+                        pram or buggy in your car.<br />
+                        <i>* PLEASE NOTE: The Buggy Park is unsupervised and items are left at owner’s risk.
+                        SRPS accepts no liability for any loss of items on the day</i>.`
+                },
+                {
+                    n: "Seventeen",
+                    q: "Do you have facilities for disabled visitors?",
+                    a: `There is good disabled access to the station, the Station Buffet, the entertainment, the trains,
+                        the Museum of Scottish Railways and Engineering Workshop Viewing Gallery.
+                        There is also plenty of dedicated disabled parking at Bo’ness. A disabled toilet is also available at Bo’ness station.
+                        All trains are equipped with ramps for easy wheelchair access.
+                        Wheelchair users should call Quaytickets on <a href="tel:08432080500">0843 208 0500</a> to book their tickets.
+                        Our accessible carriage is Carriage B. If you have any further questions or would like to see the accessibility document,
+                        contact Bo’ness & Kinneil directly on <a href="tel:01506825855">01506 825855</a> to discuss suitability.`
+                },
+                {
+                    n: "Eighteen",
+                    q: "What is your Covid-19 policy?",
+                    a: `We continue to monitor Scottish Government guidelines and will provide visitors
+                        with up-to-date information closer to the event.`
+                },
+                {
+                    n: "Nineteen",
+                    q: "Is Thomas at your railway all the time?",
+                    a: `We are open for much of the year (see our Prices & Timetables) and run a steam and diesel service.
+                        However we are pleased to say that 2022 dates for Day Out With Thomas are Saturday 11 & Sunday 12 June
+                        and Saturday 23 & Sunday 24 July. At other times Thomas can be found being a really useful engine at other railways.
+                        You can find out where by visiting <a href="https://www.dayoutwiththomas.co.uk">www.dayoutwiththomas.co.uk</a>.`
+                }
+            ],
+            blockstyle: '',
+            assets: '',
+        }
+    },
+    mounted: function() {
+
+    }
+}
+</script>
+
+<style>
+
+</style>

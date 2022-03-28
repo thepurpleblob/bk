@@ -31,24 +31,6 @@
                 </div>
             </div>
         </div>
-
-        <!--
-        <div :style="item.style"  v-for="item in items" :key="item.id">    
-
-            <div class="row mb-4">
-                <div class="col-8">
-                    <img class="item-img img-fluid" :src="assets + item.Picture" />
-                </div>
-                <div class="col-4">
-                    <h2 class="mt-3">{{ item.title }}</h2>
-                    <p>{{ item.tagline }}</p>
-                    <p v-if="item.More">
-                        <a :href="item.morelink">Read more...</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        -->
     </div>
 </template>
 
