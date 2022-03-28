@@ -1,14 +1,14 @@
 <template>
-    <div id="ThomasPage" class="home container-fluid">
+    <div id="ThomasPage" class="home container">
         <h1>Day Out With Thomas</h1>
 
         <h2>Dates, Prices and Tickets</h2>
 
         <div class="row mb-2">
-            <div class="col">
-                <img src="~@/assets/DOWT1_scaled.jpg" alt="DOWT Family" />
+            <div class="col-12 col-sm-6">
+                <img class="img-fluid" src="~@/assets/DOWT1_scaled.jpg" alt="DOWT Family" />
             </div>
-            <div class="col">
+            <div class="col-12 col-sm-6">
                 <small><i>Image by Paul Michael Hughes Photography<br />
                     <ul class="list-unstyled">
                         <li><font-awesome-icon  icon="phone-square-alt"/> <a href="tel:07790819111"> 07790819111 UK</a></li>
