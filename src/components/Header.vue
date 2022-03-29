@@ -24,6 +24,9 @@
                     <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/about')}">
                         <router-link class="nav-link px-0" to="/page/about">About us</router-link>
                     </li>
+                    <li class="nav-item border-bottom border-3 ms-5" :class="{'border-primary': isActive('/page/museum')}">
+                        <router-link class="nav-link px-0" to="/page/museum">Museum</router-link>
+                    </li>
                 </ul>
                 <div class="pe-2 text-center">
                     <a href="https://bkrailway.digitickets.co.uk"><img width="150px" src="@/assets/Click-for-tickets.png" alt="Book your Tickets" /></a>

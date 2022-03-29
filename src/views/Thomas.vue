@@ -111,6 +111,12 @@
             </div>
         </div>
 
+        <div id="trademark">
+            <p><small>Day Out With Thomas ™ © 2022 Gullane (Thomas) Limited. Thomas &amp; Friends™ 
+            Based on The Railway Series by The Reverend W.Awdry. © 2022 Gullane (Thomas) Limited.</small></p> 
+            <p><small>Thomas the Tank Engine, Thomas &amp; Friends and Day Out With Thomas are trademarks of Gullane (Thomas) Limited. 
+                ©2022 Mattel. All rights reserved. ® and ™ designate U.S. trademarks of Mattel, except as noted.</small></p>
+        </div>
     </div>
 </template>
 
