@@ -9,7 +9,7 @@
                 <h1>{{ item.Title }}</h1>
                 <div v-html="item.Content"></div>
                 <div class="mt-2">
-                    <router-link class="btn btn-outline-light" to="/page/greatdayout">Find out more...</router-link>
+                    <router-link class="btn btn-outline-light" :to="item.Page">Find out more...</router-link>
                 </div>
             </div>
             <div v-if="item.isleft" id="oldfashioned" class="col-sm-6 col-lg-7 p-4 d-none d-sm-grid" :style="item.imagestyle">
