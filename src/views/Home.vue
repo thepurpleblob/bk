@@ -5,9 +5,11 @@
             <div class="col-12 col-sm-6 col-lg-5 bg-dark text-light p-4">
                 <h1>A Great Day Out - 
                 the old fashioned way</h1>
+                <!--
                 <div class="mt-2">
                     <router-link class="btn btn-outline-light" to="/page/greatdayout">Find out more...</router-link>
                 </div>
+                -->
             </div>
             <div id="oldfashioned" class="col-sm-6 col-lg-7 p-4">
 
