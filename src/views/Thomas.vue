@@ -1,8 +1,6 @@
 <template>
     <div id="ThomasPage" class="home container">
-        <h1>Day Out With Thomas</h1>
-
-        <h2>Dates, Prices and Tickets</h2>
+        <h1>Day Out With Thomas - Dates, Prices and Tickets</h1>
 
         <div class="row mb-2">
             <div class="col-12 col-sm-6">
@@ -19,9 +17,69 @@
             </div>
         </div>
 
-        <h2 class="text-center mt-2">
+        <h2 class="text-center my-4">
             We are delighted to welcome visitors to a Day Out With Thomas™ in 2022. 
         </h2>
+
+        <div class="row mb-4">
+            <div class="col-12 col-sm-6">
+                <div class="card">
+                    <h3 class="card-header">Prices</h3>
+                    <div class="card-body">
+                        <p><b>The fare for anyone age 2 or over is £16* and must be pre-booked.</b></p>
+ 
+                        <p>
+                            Under 2s are free but will not be entitled to a seat, 
+                            please be aware that every seat in your carriage could be sold out 
+                            so we appreciate your co-operation with this.
+                        </p>
+                        <p>
+                            All entertainment and rides are covered by your ticket! See programme when available.
+                        </p>
+                        <p>
+                            This is a Premium Fare event which means discount vouchers including Tesco vouchers, 
+                            complimentary tickets, Annual membership cards &amp; vouchers and other discount passes are not valid.
+                        </p>
+                        <p>
+                            *All transactions are subject to a non-refundable 75p transaction charge and non-refundable 10% booking fee.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="card">
+                    <h3 class="card-header">WHAT'S INCLUDED IN THE TICKET PRICE?</h3>
+                    <div class="card-body">
+                        <p><b>Look what’s included in your ticket!</b></p>
+                        <ul>
+                            <li>Mini Shows with Rusty &amp; Dusty</li>
+                            <li>Thomas &amp; Friends Story telling</li>
+                            <li>Sing-a-longs with Rusty &amp; Dusty</li>
+                            <li>Imagination Station with Thomas &amp; Friends activities</li>
+                            <li>Museum of Scottish Railways</li>
+                            <li>Engineering Workshop Viewing Gallery</li>
+                            <li>Face painting</li>
+                            <li>Spot the character competition</li>
+                            <li>Miniature Railway rides</li>
+                            <li>Model Railway</li>
+                            <li>Exciting Thomas & Friends giveaways for every child</li>
+                        </ul>
+                        <p>
+                            If you have booked tickets for the afternoon it is advisable to enjoy
+                            all there is to do at Bo’ness before you take your train ride to Birkhill
+                            as some things may be unavailable when you get back to Bo’ness following
+                            your return train journey from Birkhill.
+                        </p>
+                        <p>
+                            <i>*Exact details of entertainment subject to availability and change.</i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Other Useful Information</h2>
 
         <div class="accordion mb-4" id="accordionFAQ">
             <div v-for="item in items" :key="item.n" class="accordion-item">
@@ -32,7 +90,7 @@
                 </h2>
                 <div :id="'collapse' + item.n" class="accordion-collapse collapse" :aria-labelledby="'heading' + item.n" data-bs-parent="#accordionFAQ">
                 <div class="accordion-body">
-                    <span v-html="item.a"></span>
+                    <i><span v-html="item.a"></span></i>
                 </div>
                 </div>
             </div>
