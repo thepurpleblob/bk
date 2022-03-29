@@ -9,13 +9,13 @@
                     <router-link class="btn btn-outline-light" to="/page/greatdayout">Find out more...</router-link>
                 </div>
             </div>
-            <div id="oldfashioned" class="col-sm-6 col-lg-7 p-4 d-none d-sm-grid">
+            <div id="oldfashioned" class="col-sm-6 col-lg-7 p-4">
 
             </div>
         </div>
 
         <div class="row my-4 border">
-            <div id="faresandtickets" class="col-sm-6 col-lg-7 p-4 d-none d-sm-grid">
+            <div id="faresandtickets" class="col-sm-6 col-lg-7 p-4">
 
             </div>
             <div class="col-12 col-sm-6 col-lg-5 bg-success text-body p-4">
@@ -78,11 +78,13 @@ export default {
 <style>
     #oldfashioned {
         background-image: url('~@/assets/banner-birkhill-2016.jpeg');
+        background-position: center;
         height: 340px;
     }
 
     #faresandtickets {
         background-image: url('~@/assets/banner-boness-view1.jpeg');
+        background-position: left;
         height: 340px;
     }
 

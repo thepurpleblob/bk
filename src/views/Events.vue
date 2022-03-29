@@ -2,7 +2,7 @@
     <div class="home container-fluid">
 
         <div v-for="item in items" :key="item.id" class="row my-4 border" :style="item.rowstyle">
-            <div v-if="!item.isleft" id="oldfashioned" class="col-sm-6 col-lg-7 p-4 d-none d-sm-grid" :style="item.imagestyle">
+            <div v-if="!item.isleft" id="oldfashioned" class="col-sm-6 col-lg-7 p-4" :style="item.imagestyle">
 
             </div>
             <div class="col-12 col-sm-6 col-lg-5 p-4 text-center">
@@ -12,7 +12,7 @@
                     <router-link class="btn btn-outline-light" :to="item.Page">Find out more...</router-link>
                 </div>
             </div>
-            <div v-if="item.isleft" id="oldfashioned" class="col-sm-6 col-lg-7 p-4 d-none d-sm-grid" :style="item.imagestyle">
+            <div v-if="item.isleft" class="col-sm-6 col-lg-7 p-4" :style="item.imagestyle">
 
             </div>
         </div>
@@ -59,10 +59,10 @@ export default {
                 };
                 let style = '';
                 if (item.backgroundcolor) {
-                    style += 'background: ' + item.backgroundcolor + '; ';
+                    //style += 'background: ' + item.backgroundcolor + '; ';
                 }
                 if (item.textcolor) {
-                    style += 'color: ' + item.textcolor + '; ';
+                    //style += 'color: ' + item.textcolor + '; ';
                 }
                 item.style = style;
                 item.morelink = '/page/' + item.More;

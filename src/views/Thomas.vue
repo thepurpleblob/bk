@@ -79,6 +79,21 @@
             </div>
         </div>
 
+        <div class="row mb-2">
+            <div class="col-12 col-sm-6">
+                <img class="img-fluid" src="~@/assets/DOWT2-scaled.jpg" alt="DOWT Family" />
+            </div>
+            <div class="col-12 col-sm-6">
+                <small><i>Image by Paul Michael Hughes Photography<br />
+                    <ul class="list-unstyled">
+                        <li><font-awesome-icon  icon="phone-square-alt"/> <a href="tel:07790819111"> 07790819111 UK</a></li>
+                        <li><font-awesome-icon icon="envelope"/> <a href="mailto:pmh@paulmichaelhughes.com">pmh@paulmichaelhughes.com</a></li>
+                        <li><font-awesome-icon icon="globe"/> <a href="https://www.paulmichaelhughes.com">www.paulmichaelhughes.com</a></li>
+                    </ul>
+                </i></small>
+            </div>
+        </div>
+
         <h2>Other Useful Information</h2>
 
         <div class="accordion mb-4" id="accordionFAQ">
