@@ -9,7 +9,7 @@
                 <h1>{{ item.Title }}</h1>
                 <div v-html="item.Content"></div>
                 <div class="mt-2">
-                    <router-link class="btn btn-outline-light" :to="item.Page">Find out more...</router-link>
+                    <router-link v-if="item.Page" class="btn btn-outline-light" :to="item.Page">Find out more...</router-link>
                 </div>
             </div>
             <div v-if="item.isleft" class="col-sm-6 col-lg-7 p-4" :style="item.imagestyle">
@@ -43,7 +43,6 @@ export default {
         axios.get(url + '/Events?filter={ "status": { "_eq": "published" }}')
         .then(response => {
             const items = response.data.data;
-    window.console.log(items);
             let isleft = true;
             items.forEach(item => {
                 item.rowstyle = {
