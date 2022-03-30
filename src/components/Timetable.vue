@@ -136,6 +136,9 @@
                     case 'orange':
                         css = '#fd7e14';
                         break;
+                    case 'blue':
+                        css = '#0d6efd';
+                        break;
                 }
                 return {
                     'border-color': css + ' !important',

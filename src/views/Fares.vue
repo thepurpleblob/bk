@@ -68,7 +68,7 @@ export default {
             const v = this;
             const sendCalendarRequest = async() => {
                 try {
-                    const response = await axios.get(url + '/Calendar');
+                    const response = await axios.get(url + '/Calendar?limit=-1');
                     const events = response.data.data;
                     this.events = events;
                     v.attributes = [];
@@ -199,5 +199,17 @@ export default {
 
     .dot-pink {
         background-color: #d63384;
+    }
+
+    .dot-blue {
+        background-color: #0d6efd;
+    }
+
+    .dot-red {
+        background-color: #c53030;
+    }
+
+    .dot-purple {
+        background-color: #6f42c1;
     }
 </style>
