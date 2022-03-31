@@ -1,5 +1,5 @@
 <template>
-    <div id="timetable" class="container-fluid py-1"> 
+    <div id="timetable" class="container-fluid py-1 px-0 px-sm-2"> 
         <p class="mt-2 text-center text-uppercase"><b>{{ title }} TIMETABLE</b></p>
         <table v-if="services" class="table table-striped table-sm table-responsive border border-4 rounded-2" :style="modalColor">
             <tbody>
@@ -14,7 +14,8 @@
                     <th>
                         Bo'ness
                     </th>
-                    <td><small>depart</small></td>
+                    <td class="d-sm-table-cell d-none"><small>depart</small></td>
+                    <td class="d-sm-none"><small>d.</small></td>
                     <td v-for="service in services" :key="service.upBoness">
                         {{ service.UpBoness }}
                     </td>
@@ -23,7 +24,8 @@
                     <th>
                         Kinneil
                     </th>
-                    <td><small>depart</small></td>
+                    <td class="d-sm-table-cell d-none"><small>depart</small></td>
+                    <td class="d-sm-none"><small>d.</small></td>
                     <td v-for="service in services" :key="service.upBoness">
                         {{ service.UpKinneil }}
                     </td>
@@ -32,7 +34,8 @@
                     <th>
                         Birkhill
                     </th>
-                    <td><small>depart</small></td>
+                    <td class="d-sm-table-cell d-none"><small>depart</small></td>
+                    <td class="d-sm-none"><small>d.</small></td>
                     <td v-for="service in services" :key="service.upBoness">
                         {{ service.UpBirkhill }}
                     </td>
@@ -41,7 +44,8 @@
                     <th>
                         Manuel
                     </th>
-                    <td><small>arrive</small></td>
+                    <td class="d-sm-table-cell d-none"><small>arrive</small></td>
+                    <td class="d-sm-none"><small>a.</small></td>
                     <td v-for="service in services" :key="service.upBoness">
                         {{ service.UpManuel }}
                     </td>
@@ -51,7 +55,8 @@
                     <th>
                         Manuel
                     </th>
-                    <td><small>depart</small></td>
+                    <td class="d-sm-table-cell d-none"><small>depart</small></td>
+                    <td class="d-sm-none"><small>d.</small></td>
                     <td v-for="service in services" :key="service.upBoness">
                         {{ service.DownManuel }}
                     </td>
@@ -60,7 +65,8 @@
                     <th>
                         Birkhill
                     </th>
-                    <td><small>depart</small></td>
+                    <td class="d-sm-table-cell d-none"><small>depart</small></td>
+                    <td class="d-sm-none"><small>d.</small></td>
                     <td v-for="service in services" :key="service.upBoness">
                         {{ service.DownBirkhill }}
                     </td>
@@ -69,7 +75,8 @@
                     <th>
                         Kinneil
                     </th>
-                    <td><small>depart</small></td>
+                    <td class="d-sm-table-cell d-none"><small>depart</small></td>
+                    <td class="d-sm-none"><small>d.</small></td>
                     <td v-for="service in services" :key="service.upBoness">
                         {{ service.DownKinneil }}
                     </td>
@@ -78,7 +85,8 @@
                     <th>
                         Bo'ness
                     </th>
-                    <td><small>arrive</small></td>
+                    <td class="d-sm-table-cell d-none"><small>arrive</small></td>
+                    <td class="d-sm-none"><small>a.</small></td>
                     <td v-for="service in services" :key="service.upBoness">
                         {{ service.DownBoness }}
                     </td>
@@ -87,6 +95,10 @@
         </table>
 
         <div v-if="info" v-html="info" class="alert alert-info text-center"></div>
+
+        <div v-if="link" class="mt-4">
+            <router-link class="btn btn-outline-dark" :to="link" @click.native="$emit('close')">Find out more...</router-link>
+        </div>
 
         <div class="text-end">
             <button type="button" class="btn btn-primary" @click="$emit('close')">Close</button>
@@ -119,6 +131,10 @@
                 type: Number,
                 required: true,
             },
+            link: {
+                type: String,
+                required: false,
+            }
         },
         computed: {
             modalColor() {

@@ -26,6 +26,10 @@
                 <div class="card">
                     <h3 class="card-header">Prices</h3>
                     <div class="card-body">
+                        <div class="text-center my-3">
+                            <a href="https://www.quaytickets.com/dayoutwiththomas/en-GB/shows/day%20out%20with%20thomas%20at%20bo%27ness%20and%20kinneil%20railway/events"
+                                class="btn btn-outline-primary btn-lg">Purchase tickets</a>
+                        </div>
                         <p><b>The fare for anyone age 2 or over is £16* and must be pre-booked.</b></p>
  
                         <p>

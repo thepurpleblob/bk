@@ -1,31 +1,25 @@
 <template>
     <div class="home container-fluid">
 
-        <div v-for="item in items" :key="item.id" class="row my-4 border" :style="item.rowstyle">
-            <div v-if="!item.isleft" id="oldfashioned" class="col-sm-6 col-lg-7 p-4" :style="item.imagestyle">
-
-            </div>
-            <div class="col-12 col-sm-6 col-lg-5 p-4 text-center">
-                <h1>{{ item.Title }}</h1>
-                <div v-html="item.Content"></div>
-                <div class="mt-2">
-                    <router-link v-if="item.Page" class="btn btn-outline-light" :to="item.Page">Find out more...</router-link>
-                </div>
-            </div>
-            <div v-if="item.isleft" class="col-sm-6 col-lg-7 p-4" :style="item.imagestyle">
-
-            </div>
-        </div>
+        <Block
+            v-for="item in items" :key="item.id"
+            :heading="item.Title"
+            :content="item.Content"    
+            :routerlink="item.Page"
+            :image="item.imageurl"
+            :imageleft="item.isleft"
+        ></Block>
     </div>
 </template>
 
 <script>
 import axios from 'axios';
+import Block from '../components/Block.vue';
 
 export default {
     name: 'Events',
     components: {
-      
+        Block,
     },
     data: function() {
         return {
@@ -45,25 +39,7 @@ export default {
             const items = response.data.data;
             let isleft = true;
             items.forEach(item => {
-                item.rowstyle = {
-                    "background-color": item.Background,
-                    "color": item.TextColour,
-                };
-                item.imagestyle = {
-                    "background-image": "url(" + v.assets + item.Image + ")",
-                    "height": "340px",
-                    "background-repeat": "no-repeat",
-                    "background-size": "contain",
-                    "background-position": isleft ? "right" : "left",
-                };
-                let style = '';
-                if (item.backgroundcolor) {
-                    //style += 'background: ' + item.backgroundcolor + '; ';
-                }
-                if (item.textcolor) {
-                    //style += 'color: ' + item.textcolor + '; ';
-                }
-                item.style = style;
+                item.imageurl = v.assets + item.Image;
                 item.morelink = '/page/' + item.More;
                 item.isleft = isleft;
                 isleft = !isleft;

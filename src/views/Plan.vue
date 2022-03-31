@@ -29,6 +29,7 @@
 
                         <ul>
                             <li>First Class Private Compartment for up to 6 people - <strong>£60.00</strong></li>
+                            <li>Standard Class Private Compartment for up to 6 people - <strong>£50.00</strong></li>
                         </ul>
 
                         <p>
@@ -37,6 +38,7 @@
 
                         <ul>
                             <li>Adult - <strong>£13.00</strong></li>
+                            <li>Senior (60+) - <strong>£12.00</strong></li>
                             <li>Child (5-15) - <strong>£7.00</strong></li>
                             <li>Family (2 adults and up to 3 childred) - <strong>£36.00</strong></li>
                             <li>Infants (under age 5)  - <strong>Free</strong> (but do not get a seat)</li>
@@ -45,10 +47,23 @@
                             <a href="https://bkrailway.digitickets.co.uk" title="Book your tickets">
                             <img width="150px" src="@/assets/Click-for-tickets.png" alt="Book your Tickets" /></a>
                         </p>
+                        <p class="mt-3">
+                            <i>Special event fares apply -
+                                <router-link to="events">Please see our Events page for further information</router-link></i>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+
+         <div class="row mb-4">
+            <div class="col-12 col-sm-6">
+                <img class="image-fluid" src="@/assets/BKR-374.jpg" />
+            </div>
+            <div class="col-12 col-sm-6">
+                <img class="image-fluid" src="@/assets/BKR-288.jpg" />
+            </div>
+         </div>
 
         <h2>More information</h2>
 
@@ -149,8 +164,8 @@ export default {
                 {
                     n: 'Four',
                     q: "Do I need to pre-book tickets online?",
-                    a: `You can pre-book your date and train departure time up to half an hour before departure
-                        subject to availability. <a href="https://bkrailway.digitickets.co.uk" title="Book your tickets">Book your tickets</a>.
+                    a: `You can pre-book your date and train departure time up until 9am on the day of your visit subject to availability.
+                        <a href="https://bkrailway.digitickets.co.uk" title="Book your tickets">Book your tickets here</a>.
                         Your ticket will only be valid for the train you book.
                         Some tickets may be available at the station on the day, but if the train you wish to
                         travel on is fully booked, you will not be able to board. So it’s best to pre-book if you can.
@@ -196,7 +211,7 @@ export default {
                 {
                     n: 'Eight',
                     q: "What time should we get to Bo’ness Station to catch our train?",
-                    a: `Please arrive around 20 minutes before your train departure to allow time for parking
+                    a: `Please arrive around 20-30 minutes before your train departure to allow time for parking,
                         waiting to board your train and visiting our toilet facilities.`
                 },
                 {
@@ -249,7 +264,10 @@ export default {
                 {
                     n: 'Fifteen',
                     q: "Are the station and trains accessible?",
-                    a: `<a href="https://www.accessibilityguides.org/content/boness-kinneil-railway">Please see our accessibility statement.</a>`
+                    a: `
+                    <strong>IMPORTANT NOTE:</strong> Unfortunately our accessible carriage is out of service at present.
+                    We are really sorry for any inconvenience and will have it back in service as soon as we can.<br />
+                    <a href="https://www.accessibilityguides.org/content/boness-kinneil-railway">Please see our accessibility statement.</a>`
                 },
                 {
                     n: 'Sixteen',

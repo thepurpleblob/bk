@@ -100,10 +100,11 @@ export default {
                 const v = this;
                 axios.get(url + '/Timetable/' + ttid)
                 .then(response => {
-                    //window.console.log(response.data.data.Service);
+                    //window.console.log(response.data.data);
                     const services = response.data.data.Service;
                     const title = response.data.data.Title;
                     const info = response.data.data.Info;
+                    const link = response.data.data.link;
 
                     v.$modal.show(
                         Timetable,
@@ -113,6 +114,7 @@ export default {
                             color: color,
                             info: info,
                             servicecount: services != null ? services.length : 0,
+                            link: link,
                         },
                         {
                             adaptive: true,
