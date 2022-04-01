@@ -43,10 +43,18 @@
                             <li>Family (2 adults and up to 3 childred) - <strong>£36.00</strong></li>
                             <li>Infants (under age 5)  - <strong>Free</strong> (but do not get a seat)</li>
                         </ul>
-                        <p>
+                        <p class="text-center">
                             <a href="https://bkrailway.digitickets.co.uk" title="Book your tickets">
                             <img width="150px" src="@/assets/Click-for-tickets.png" alt="Book your Tickets" /></a>
                         </p>
+                        <p>
+                            Add a visit to the <router-link to="page/museum">Museum of Scottish Railways</router-link> when you buy your
+                            train ticket and get a great discount -
+                        </p>
+                        <ul>
+                            <li>Adult - £3 (normal price £7)</li>
+                            <li>Child - 50p (normal price £2)</li>
+                        </ul>
                         <p class="mt-3">
                             <i>Special event fares apply -
                                 <router-link to="events">Please see our Events page for further information</router-link></i>
@@ -168,8 +176,23 @@ export default {
                         <a href="https://bkrailway.digitickets.co.uk" title="Book your tickets">Book your tickets here</a>.
                         Your ticket will only be valid for the train you book.
                         Some tickets may be available at the station on the day, but if the train you wish to
-                        travel on is fully booked, you will not be able to board. So it’s best to pre-book if you can.
+                        travel on is fully booked, you will not be able to board. So it's best to pre-book if you can.
                         `
+                },
+                {
+                    n: 'FourA',
+                    q: "Can I bring my group to your Railway and Museum?",
+                    a: `Of course. Group discounts apply for 12+ paying passengers.
+                    Please contact our office on <a href="tel:01506825855">01506 825855</a>
+                    or email <a href="mailto:office@srps.org.uk">office@srps.org.uk</a> for further information.`
+                },
+                {
+                    n: 'FourB',
+                    q: "Do you accept bookings from School Groups?",
+                    a: `Yes, we welcome school groups and also have a great Education Pack available to help
+                    with planning your visit or for use in the classroom.
+                    Please contact our office on <a href="tel:01506825855">01506 825855</a>
+                    or email <a href="mailto:office@srps.org.uk">office@srps.org.uk</a> for further information.`
                 },
                 {
                     n: 'Five',

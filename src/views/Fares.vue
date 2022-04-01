@@ -1,5 +1,6 @@
 <template>
     <div class="py-4 container">
+        <p><b>Click on a date to see the train times...</b></p>
         <v-calendar v-if="isPopulated" is-expanded :attributes="attributes" color="blue" v-on:dayclick="onDayclick" v-on:update:from-page="toPage"></v-calendar>
         <div class="row py-4">
             <div v-for="label in labels" :key="label.title" class="col">

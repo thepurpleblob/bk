@@ -42,6 +42,12 @@ export default {
                     text: 'Timetables',
                     icon: 'calendar-alt',
                     routerlink: '/fares'
+                },
+                {
+                    n: 3,
+                    text: 'Fares',
+                    icon: 'pound-sign',
+                    routerlink: '/plan',
                 }
             ]
         }

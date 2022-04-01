@@ -2,9 +2,9 @@
     <div id="footer" class="container-fluid text-white py-4"> 
         <div id="socialicons">
             <ul class="list-inline">
-                <li class="list-inline-item"><a class="link-light pe-2" href="https://www.facebook.com/BonessKinneilRailway/"><font-awesome-icon size="3x" :icon="['fab', 'facebook-square']" /></a></li>
-                <li class="list-inline-item"><a class="link-light pe-2" href="https://www.instagram.com/bonesskinneilrailway/"><font-awesome-icon size="3x" :icon="['fab', 'instagram-square']" /></a></li>
-                <li class="list-inline-item"><a class="link-light" href="https://twitter.com/bonessrailway"><font-awesome-icon size="3x" :icon="['fab', 'twitter-square']" /></a></li>
+                <li class="list-inline-item"><a class="link-light pe-2" target="_blank" href="https://www.facebook.com/BonessKinneilRailway/"><font-awesome-icon size="3x" :icon="['fab', 'facebook-square']" /></a></li>
+                <li class="list-inline-item"><a class="link-light pe-2" target="_blank" href="https://www.instagram.com/bonesskinneilrailway/"><font-awesome-icon size="3x" :icon="['fab', 'instagram-square']" /></a></li>
+                <li class="list-inline-item"><a class="link-light" target="_blank" href="https://twitter.com/bonessrailway"><font-awesome-icon size="3x" :icon="['fab', 'twitter-square']" /></a></li>
             </ul>
         </div>
         <div>
@@ -30,6 +30,10 @@
             <li class="list-inline-item"><router-link class="link-light" to="/page/dp">Data protection policy</router-link></li>
             <li class="list-inline-item"><router-link class="link-light" to="/page/company">Company details</router-link></li>
         </ul>
+
+        <div id="footerlogos" class="text-end">
+            <img class="image-fluid" src="@/assets/TouristBoard.png" alt="Scottish Tourist Board Attraction"/>
+        </div>
     </div> 
 </template>
 
