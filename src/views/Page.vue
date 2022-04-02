@@ -1,9 +1,18 @@
 <template>
     <div class="page py-2">
-        <div class="container-fluid">
-            <h2>{{ title }}</h2>
+
+        <div v-if="loading" class="d-flex justify-content-center">
+            <div class="spinner-border text-primary text-center my-4" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
         </div>
-        <div class="pagecontent container-fluid fs-5" v-html="content"></div>
+
+        <div v-if="!loading">
+            <div class="container-fluid">
+                <h2>{{ title }}</h2>
+            </div>
+            <div class="pagecontent container-fluid fs-5" v-html="content"></div>
+        </div>
     </div>
 </template>
 
@@ -17,6 +26,7 @@ export default {
     },
     data: function() {
         return {
+            loading: true,
             title: '',
             content: '',
             blockstyle: '',
@@ -46,6 +56,7 @@ export default {
                     window.console.log('Error 404');
                     // TODO: Redirect to 404
                 }
+                v.loading = false;
             })
             .catch(error => {
                 window.console.log(error);

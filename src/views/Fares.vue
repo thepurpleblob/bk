@@ -1,8 +1,13 @@
 <template>
     <div class="py-4 container">
         <p><b>Click on a date to see the train times...</b></p>
-        <v-calendar v-if="isPopulated" is-expanded :attributes="attributes" color="blue" v-on:dayclick="onDayclick" v-on:update:from-page="toPage"></v-calendar>
-        <div class="row py-4">
+        <div v-if="loading" class="d-flex justify-content-center">
+            <div class="spinner-border text-primary text-center my-4" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <v-calendar v-if="isPopulated && !loading" is-expanded :attributes="attributes" color="blue" v-on:dayclick="onDayclick" v-on:update:from-page="toPage"></v-calendar>
+        <div v-if="!loading" class="row py-4">
             <div v-for="label in labels" :key="label.title" class="col">
                 <span class="dot rounded-circle" :class="label.color"></span> {{ label.title }}
             </div>
@@ -52,6 +57,7 @@ export default {
     },
     data: function() {
         return {
+            loading: true,
             content: '',
             isPopulated: false,
             isEvents: false,
@@ -85,6 +91,7 @@ export default {
                         });
                     });
                     this.isPopulated = true;
+                    this.loading = false;
                 }
                 catch(error)  {
                     window.console.error(error);

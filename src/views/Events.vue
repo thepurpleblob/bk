@@ -1,14 +1,22 @@
 <template>
     <div class="home container-fluid">
 
-        <Block
-            v-for="item in items" :key="item.id"
-            :heading="item.Title"
-            :content="item.Content"    
-            :routerlink="item.Page"
-            :image="item.imageurl"
-            :imageleft="item.isleft"
-        ></Block>
+        <div v-if="loading" class="d-flex justify-content-center">
+            <div class="spinner-border text-primary text-center my-4" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <div v-if="!loading">
+            <Block
+                v-for="item in items" :key="item.id"
+                :heading="item.Title"
+                :content="item.Content"    
+                :routerlink="item.Page"
+                :image="item.imageurl"
+                :imageleft="item.isleft"
+            ></Block>
+        </div>
     </div>
 </template>
 
@@ -23,6 +31,7 @@ export default {
     },
     data: function() {
         return {
+            loading: true,
             items: [],
             blockstyle: '',
             assets: '',
@@ -45,6 +54,7 @@ export default {
                 isleft = !isleft;
             });
             v.items = items;
+            v.loading = false;
         })
     }
 }
