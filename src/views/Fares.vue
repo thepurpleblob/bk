@@ -8,8 +8,8 @@
         </div>
         <v-calendar v-if="isPopulated && !loading" is-expanded :attributes="attributes" color="blue" v-on:dayclick="onDayclick" v-on:update:from-page="toPage"></v-calendar>
         <div v-if="!loading" class="row py-4">
-            <div v-for="label in labels" :key="label.title" class="col">
-                <span class="dot rounded-circle" :class="label.color"></span> {{ label.title }}
+            <div v-for="label in labels" :key="label.title" class="col" @click.prevent="labelclicked(label.ttid, label.rawcolor)">
+                <a class="text-decoration-none text-dark" href="#"><span class="dot rounded-circle" :class="label.color"></span> {{ label.title }}</a>
             </div>
             <div v-if="!isEvents" class="alert alert-dark">
                 There are no services in this month
@@ -99,38 +99,58 @@ export default {
             }
             sendCalendarRequest();
         },
+        displayTimetable: function(ttid, color) {
+            const url = process.env.VUE_APP_ENDPOINT;
+            const v = this;
+            axios.get(url + '/Timetable/' + ttid)
+            .then(response => {
+                //window.console.log(response.data.data);
+                const services = response.data.data.Service;
+                const title = response.data.data.Title;
+                const info = response.data.data.Info;
+                const link = response.data.data.link;
+
+                v.$modal.show(
+                    Timetable,
+                    {
+                        services: format_services(services),
+                        title: title,
+                        color: color,
+                        info: info,
+                        servicecount: services != null ? services.length : 0,
+                        link: link,
+                    },
+                    {
+                        adaptive: true,
+                        height: 'auto',
+                        minHeight: 300,
+                    }
+                );
+            })
+        },
         onDayclick: function(day) {
             //window.console.log(day);
-            const ttid = day.attributes[0].customData.ttid;
-            const color = day.attributes[0].customData.color;
-            if (ttid != null) {
-                const url = process.env.VUE_APP_ENDPOINT;
-                const v = this;
-                axios.get(url + '/Timetable/' + ttid)
-                .then(response => {
-                    //window.console.log(response.data.data);
-                    const services = response.data.data.Service;
-                    const title = response.data.data.Title;
-                    const info = response.data.data.Info;
-                    const link = response.data.data.link;
-
-                    v.$modal.show(
-                        Timetable,
-                        {
-                            services: format_services(services),
-                            title: title,
-                            color: color,
-                            info: info,
-                            servicecount: services != null ? services.length : 0,
-                            link: link,
-                        },
-                        {
-                            adaptive: true,
-                            height: 'auto',
-                            minHeight: 300,
-                        }
-                    );
-                })
+            if (day.attributes.length) {
+                const ttid = day.attributes[0].customData.ttid;
+                const color = day.attributes[0].customData.color;
+                if (ttid != null) {
+                    this.displayTimetable(ttid, color);
+                }
+            } else {
+                this.$modal.show(
+                    Timetable,
+                    {
+                        title: '',
+                        color: '#000000',
+                        info: 'There are no services on this day',
+                        servicecount: 0,
+                    },
+                    {
+                        adaptive: true,
+                        height: 'auto',
+                        minHeight: 300,
+                    }
+                );               
             }
         },
         toPage: function(page) {
@@ -149,7 +169,9 @@ export default {
                         })) {
                             labels.push({
                                 title: event.Title,
-                                color: 'dot-' + event.Color
+                                color: 'dot-' + event.Color,
+                                ttid: event.Timetable,
+                                rawcolor: event.Color,
                             });
                         }
                     } else {
@@ -158,7 +180,9 @@ export default {
                         })) {
                             labels.push({
                                 title: event.Title + ' Timetable',
-                                color: 'dot-' + event.Color
+                                color: 'dot-' + event.Color,
+                                ttid: event.Timetable,
+                                rawcolor: event.Color,
                             });
                         }
                     }
@@ -166,6 +190,9 @@ export default {
             });
             this.labels = labels;
             //window.console.log(this.labels);
+        },
+        labelclicked(ttid, color) {
+            this.displayTimetable(ttid, color);
         }
     },
     mounted: function() {
