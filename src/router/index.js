@@ -6,6 +6,7 @@ import Fares from '../views/Fares.vue'
 import Plan from '../views/Plan.vue'
 import Events from '../views/Events.vue'
 import Thomas from '../views/Thomas.vue'
+import Error404 from '../views/Error404.vue'
 
 Vue.use(VueRouter)
 
@@ -47,6 +48,11 @@ const routes = [
     path: '/thomas',
     name: 'Thomas',
     component: Thomas,
+  },
+  {
+    path: '/404',
+    name: '404',
+    component: Error404,
   }
 ]
 

@@ -56,6 +56,9 @@ export default {
             v.items = items;
             v.loading = false;
         })
+        .catch(() => {
+            v.$router.push('/404');
+        })
     }
 }
 </script>

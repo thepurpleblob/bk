@@ -53,13 +53,15 @@ export default {
                     v.title = page.Title;
                     v.content = page.Content;
                 } else {
-                    window.console.log('Error 404');
+                    v.$log.error('Error 404');
+                    v.$router.push('/404');
                     // TODO: Redirect to 404
                 }
                 v.loading = false;
             })
             .catch(error => {
-                window.console.log(error);
+                v.$router.push('/404');
+                v.$log.error(error);
             })
         }
     },
