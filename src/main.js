@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import VCalendar from 'v-calendar'
 import VModal from 'vue-js-modal'
+import VueLogger from 'vuejs-logger';
 //import 'bootstrap/dist/css/bootstrap.min.css'
 import '@/assets/scss/bkr.scss'
 import 'bootstrap/dist/js/bootstrap.js'
@@ -26,6 +27,17 @@ library.add(
 )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+const isProduction = process.env.NODE_ENV === 'production';
+Vue.use(VueLogger, {
+  isEnabled: true,
+  logLevel : isProduction ? 'error' : 'debug',
+  stringifyArguments : false,
+  showLogLevel : true,
+  showMethodName : true,
+  separator: '|',
+  showConsoleColors: true
+});
 
 Vue.config.productionTip = false
 

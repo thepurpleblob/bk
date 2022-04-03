@@ -156,7 +156,7 @@ export default {
         toPage: function(page) {
             // (isPopulated is critical for this to be called with data)
             //window.console.log(page);
-            //window.console.log(this.events);
+            this.$log.debug(this.events);
             const yearmonth = page.year.toString() + '-' + page.month.toString().padStart(2, '0');
             const labels = [];
             this.isEvents = false;
