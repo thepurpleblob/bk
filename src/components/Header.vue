@@ -24,6 +24,9 @@
                     <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/about')}">
                         <router-link class="nav-link px-0" to="/page/about">About us</router-link>
                     </li>
+                    <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/events')}">
+                        <router-link class="nav-link px-0" to="/news">News</router-link>
+                    </li>
                     <li class="nav-item border-bottom border-3 ms-5" :class="{'border-primary': isActive('/page/museum')}">
                         <router-link class="nav-link px-0" to="/page/museum">Museum</router-link>
                     </li>

@@ -5,6 +5,7 @@ import Page from '../views/Page.vue'
 import Fares from '../views/Fares.vue'
 import Plan from '../views/Plan.vue'
 import Events from '../views/Events.vue'
+import News from '../views/News.vue'
 import Thomas from '../views/Thomas.vue'
 import Error404 from '../views/Error404.vue'
 
@@ -38,6 +39,11 @@ const routes = [
     path: '/plan',
     name: 'Plan',
     component: Plan,
+  },
+  {
+    path: '/news',
+    name: 'News',
+    component: News,
   },
   {
     path: '/events',
