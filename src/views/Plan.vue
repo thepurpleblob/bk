@@ -4,6 +4,25 @@
             <h2>Plan your visit</h2>
 
         <div class="row mb-4">
+            <div class="col">
+                <div class="card">
+                    <h3 class="card-header text-center">WELCOME ABOARD</h3>
+                    <div class="card-body">
+                        <p>
+                            There's nothing like a departure by steam or the rumble of a mighty heritage diesel locomotive.
+                            Enjoy a scenic ten mile return train journey to Manuel along the Forth Estuary, through woodlands,
+                            past waterfalls and over the Avon Viaduct.
+                        </p>
+                        <p>
+                            Our friendly volunteers are waiting to  welcome you aboard and invite you the soak up the atmosphere
+                            of our award-winning heritage railway through the sights, sounds and smells of yesteryear. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
             <div class="col-12 col-sm-6">
                 <div class="card">
                     <h3 class="card-header">TIMETABLE</h3>
