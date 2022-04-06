@@ -95,7 +95,7 @@
         <div class="row mt-4">
             <div class="col-12 col-sm-6">
                 <ul class="list-unstyled">
-                    <li><b>The Bo'ness and Kinneil Railway</b></li>
+                    <li><b>The Bo'ness &amp; Kinneil Railway</b></li>
                     <li>Bo'ness Station</li>
                     <li>Union Street</li>
                     <li>Bo'ness</li>
