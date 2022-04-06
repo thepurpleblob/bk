@@ -152,9 +152,10 @@ export default {
                 {
                     n: 'One',
                     q: "Is the railway open?",
-                    a: `Yes, a copy of our 2022 timetable is available. We open from April until October
+                    a: `Yes, we open from April until October
                         with special events in December. Steam and heritage diesel trains will run on weekends,
-                        Tuesdays and other days in school holidays during this period.`
+                        Tuesdays and other days in school holidays during this period.
+                        <a href="/fares">Our 2022 timetable is available.</a>`
                 },
                 {
                     n: 'Two',

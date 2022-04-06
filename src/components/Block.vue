@@ -21,6 +21,9 @@
             <div v-if="routerlink" class="mt-4">
                 <router-link class="btn btn-outline-dark" :to="routerlink">Find out more...</router-link>
             </div>
+            <div v-if="linkimage" class="mt-4">
+                <a :href="linkimage.link"><img :src="linkimage.src" :style="linkimage.style" /></a>
+            </div>
         </div>
         <div v-if="!imageleft" class="col-sm-6 col-lg-7 p-0">
             <img class="img-fluid float-end" :src="image" />
@@ -37,7 +40,8 @@ export default {
         'image',
         'imageleft',
         'content',
-        'list'
+        'list',
+        'linkimage',
     ]
 }
 </script>

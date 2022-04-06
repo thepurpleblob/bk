@@ -5,6 +5,11 @@
             heading="A Great Day Out - the old fashioned way"
             routerlink="/plan"
             :image="require('@/assets/TicketTrial1.jpg')"
+            :linkimage="{
+                src: require('@/assets/Click-for-tickets.png'),
+                link: 'https://bkrailway.digitickets.co.uk',
+                style: 'width: 150px'
+            }"
         ></Block>
 
         <Block
