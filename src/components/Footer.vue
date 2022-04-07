@@ -13,26 +13,34 @@
             Scottish Railway Preservation Society (operators of Bo'ness &amp; Kinneil Railway)
             is a Scottish Charity, SC002375, regulated by the Scottish Charity Regulator (OSCR)
         </div>
-        <div class="mt-3">
-            <ul class="list-unstyled">
-                <li><font-awesome-icon class="fa-fw pe-1" size="2x" icon="phone-square-alt"/> <a class="link-light text-decoration-none" href="tel:01506 825855">01506 825855</a></li>
-                <li><font-awesome-icon class="fa-fw pe-1" size="2x" icon="envelope"/> <a class="link-light text-decoration-none" href="mailto:enquiries@srps.org.uk">enquiries.railway@srps.org.uk</a></li>
-            </ul>
-        </div>
 
-        <ul class="mt-3 list-unstyled">
-            <li><a class="link-light" href="https://www.srps.org.uk/">Scottish Railway Preservation Society</a></li>
-            <li><a class="link-light" href="https://www.srps.org.uk/railtours/">SRPS Railtours</a></li>
-        </ul>
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <div class="mt-3">
+                    <ul class="list-unstyled">
+                        <li><font-awesome-icon class="fa-fw pe-1" size="2x" icon="phone-square-alt"/> <a class="link-light text-decoration-none" href="tel:01506 825855">01506 825855</a></li>
+                        <li><font-awesome-icon class="fa-fw pe-1" size="2x" icon="envelope"/> <a class="link-light text-decoration-none" href="mailto:enquiries@srps.org.uk">enquiries.railway@srps.org.uk</a></li>
+                    </ul>
+                </div>
 
-        <ul class="mt-3 list-inline">
-            <li class="list-inline-item"><router-link class="link-light" to="/page/terms">Terms & conditions</router-link></li>
-            <li class="list-inline-item"><router-link class="link-light" to="/page/dp">Data protection policy</router-link></li>
-            <li class="list-inline-item"><router-link class="link-light" to="/page/company">Company details</router-link></li>
-        </ul>
+                <ul class="mt-3 list-unstyled">
+                    <li><a class="link-light" href="https://www.srps.org.uk/">Scottish Railway Preservation Society</a></li>
+                    <li><a class="link-light" href="https://www.srps.org.uk/railtours/">SRPS Railtours</a></li>
+                </ul>
 
-        <div id="footerlogos" class="text-end">
-            <img class="image-fluid" src="@/assets/TouristBoard.png" alt="Scottish Tourist Board Attraction"/>
+                <ul class="mt-3 list-inline">
+                    <li class="list-inline-item"><router-link class="link-light" to="/page/terms">Terms & conditions</router-link></li>
+                    <li class="list-inline-item"><router-link class="link-light" to="/page/dp">Data protection policy</router-link></li>
+                    <li class="list-inline-item"><router-link class="link-light" to="/page/company">Company details</router-link></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-sm-6">
+                <div id="footerlogos" class="text-center">
+                    <img class="image-fluid pt-4" id="tblogo" src="@/assets/TouristBoard.png" alt="Scottish Tourist Board Attraction"/>
+                </div>
+            </div>
+
         </div>
     </div> 
 </template>
@@ -47,7 +55,11 @@
 </script>
 
 <style>
-#footer {
-    background: rgb(68, 68, 68) !important;
-}
+    #footer {
+        background: rgb(68, 68, 68) !important;
+    }
+
+    #tblogo {
+        height: 100px;
+    }
 </style>
