@@ -1,26 +1,35 @@
 <template>
-    <div class="py-4 container">
-        <p><b>Click on a date to see the train times...</b></p>
-        <div v-if="loading" class="d-flex justify-content-center">
-            <div class="spinner-border text-primary text-center my-4" role="status">
-                <span class="visually-hidden">Loading...</span>
+    <div class="row mt-4">
+        <div class="col-12 col-sm-6">
+            <div class="card">
+                <h3 class="card-header">TIMETABLES</h3>
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-4">Click on a date to see the train times...</h6>
+                    <div v-if="loading" class="d-flex justify-content-center">
+                        <div class="spinner-border text-primary text-center my-4" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                    <v-calendar v-if="isPopulated && !loading" is-expanded :attributes="attributes" color="blue" v-on:dayclick="onDayclick" v-on:update:from-page="toPage"></v-calendar>
+                    <div v-if="!loading" class="row py-4">
+                        <div v-for="label in labels" :key="label.title" class="col" @click.prevent="labelclicked(label.ttid, label.rawcolor)">
+                            <a class="text-decoration-none text-dark" href="#"><span class="dot rounded-circle" :class="label.color"></span> {{ label.title }}</a>
+                        </div>
+                        <div v-if="!isEvents" class="alert alert-dark">
+                            There are no services in this month
+                        </div>
+                    </div>  
+                </div>
             </div>
-        </div>
-        <v-calendar v-if="isPopulated && !loading" is-expanded :attributes="attributes" color="blue" v-on:dayclick="onDayclick" v-on:update:from-page="toPage"></v-calendar>
-        <div v-if="!loading" class="row py-4">
-            <div v-for="label in labels" :key="label.title" class="col" @click.prevent="labelclicked(label.ttid, label.rawcolor)">
-                <a class="text-decoration-none text-dark" href="#"><span class="dot rounded-circle" :class="label.color"></span> {{ label.title }}</a>
-            </div>
-            <div v-if="!isEvents" class="alert alert-dark">
-                There are no services in this month
-            </div>
-        </div>           
+        </div>    
+        <FaresBlock></FaresBlock>     
     </div>
 </template>
 
 <script>
 import axios from 'axios';
 import Timetable from '../components/Timetable';
+import FaresBlock from '../components/FaresBlock.vue';
 
 // Tidy up services data from Timetable
 function format_services(services) {
@@ -54,6 +63,7 @@ export default {
     name: 'Fares',
     components: {
     //    Timetable,
+        FaresBlock,
     },
     data: function() {
         return {

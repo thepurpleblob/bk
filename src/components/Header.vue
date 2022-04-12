@@ -13,7 +13,7 @@
                         <router-link class="nav-link px-0" aria-current="page" to="/">Home</router-link>
                     </li>
                     <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/fares')}">
-                        <router-link class="nav-link px-0" to="/fares">Timetables</router-link>
+                        <router-link class="nav-link px-0" to="/fares">Timetables &amp; Fares</router-link>
                     </li>
                     <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/plan')}">
                         <router-link class="nav-link px-0" to="/plan">Plan your visit</router-link>
@@ -27,8 +27,8 @@
                     <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/news')}">
                         <router-link class="nav-link px-0" to="/news">News</router-link>
                     </li>
-                    <li class="nav-item border-bottom border-3 ms-5" :class="{'border-primary': isActive('/page/museum')}">
-                        <router-link class="nav-link px-0" to="/page/museum">Museum</router-link>
+                    <li class="nav-item border-bottom border-3 ms-3" :class="{'border-primary': isActive('/page/museum')}">
+                        <router-link class="nav-link px-0 text-primary" to="/page/museum">Museum</router-link>
                     </li>
                 </ul>
                 <div class="pe-2 text-center">

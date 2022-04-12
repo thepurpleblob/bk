@@ -8,9 +8,8 @@
             </ul>
         </div>
         <div>
-            <b>The Scottish Railway Preservation Society</b><br />
-            Operators of Bo'ness &amp; Kinneil Railway and Museum of Scottish Railways<br />
-            Scottish Railway Preservation Society (operators of Bo'ness &amp; Kinneil Railway)
+            <b>The Scottish Railway Preservation Society,</b><br />
+            operators of Bo'ness &amp; Kinneil Railway and Museum of Scottish Railways, <br />
             is a Scottish Charity, SC002375, regulated by the Scottish Charity Regulator (OSCR)
         </div>
 
