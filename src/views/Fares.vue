@@ -18,7 +18,10 @@
                         <div v-if="!isEvents" class="alert alert-dark">
                             There are no services in this month
                         </div>
-                    </div>  
+                    </div>
+                    <div>
+                        <a href="./staticassets/Timetable2022.pdf" download>Download PDF timetable</a>
+                    </div>
                 </div>
             </div>
         </div>    

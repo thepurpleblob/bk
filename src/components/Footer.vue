@@ -1,5 +1,5 @@
 <template>
-    <div id="footer" class="container-fluid text-white py-4"> 
+    <div id="footer" class="container-fluid text-white py-4 mt-3"> 
         <div id="socialicons">
             <ul class="list-inline">
                 <li class="list-inline-item"><a class="link-light pe-2" target="_blank" href="https://www.facebook.com/BonessKinneilRailway/"><font-awesome-icon size="3x" :icon="['fab', 'facebook-square']" /></a></li>
