@@ -35,6 +35,7 @@
                  <ul class="mt-3 list-unstyled">
                     <li><a class="link-light text-warning text-decoration-none" href="https://www.srps.org.uk/">Scottish Railway Preservation Society</a></li>
                     <li><a class="link-light text-warning text-decoration-none" href="https://www.srps.org.uk/railtours/">SRPS Railtours</a></li>
+                    <li><a class="link-light text-warning text-decoration-none" href="https://shop.srps.org.uk/">SRPS online shop</a></li>
                     <li><a class="link-light text-warning text-decoration-none" href="http://www.srpsdiesel.co.uk/">SRPS Diesel Group</a></li>
                     <li><a class="link-light text-warning text-decoration-none" href="https://www.srpssteam.com/">SRPS Steam Group</a></li>
                     <li><a class="link-light text-warning text-decoration-none" href="https://www.gotopcs.net/">SRPS Carriage &amp; Wagon Dept.</a></li>

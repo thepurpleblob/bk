@@ -292,6 +292,12 @@ export default {
                         <br /><br />
                         Dogs are not allowed in the Station Buffet at Bo’ness but food and drinks from the menu can be taken
                         away and enjoyed at picnic benches around the site.`
+                },
+                {
+                    n: 'Eighteen',
+                    q: 'Do you run any special events?',
+                    a: `here is also a programme of special events for everyone from tiny tots to 
+                        avid train enthusiasts including Day Out With Thomas™ and Santa Steam Trains. `
                 }
             ]
         }
