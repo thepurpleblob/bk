@@ -10,7 +10,7 @@
                             <span class="visually-hidden">Loading...</span>
                         </div>
                     </div>
-                    <v-calendar v-if="isPopulated && !loading" is-expanded :attributes="attributes" color="blue" v-on:dayclick="onDayclick" v-on:update:from-page="toPage"></v-calendar>
+                    <v-calendar v-if="isPopulated && !loading" is-expanded :attributes="attributes" :firstDayOfWeek="2" color="blue" v-on:dayclick="onDayclick" v-on:update:from-page="toPage"></v-calendar>
                     <div v-if="!loading" class="row py-4">
                         <div v-for="label in labels" :key="label.title" class="col" @click.prevent="labelclicked(label.ttid, label.rawcolor)">
                             <a class="text-decoration-none text-dark" href="#"><span class="dot rounded-circle" :class="label.color"></span> {{ label.title }}</a>
