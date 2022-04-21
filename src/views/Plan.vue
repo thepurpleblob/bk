@@ -296,7 +296,7 @@ export default {
                 {
                     n: 'Eighteen',
                     q: 'Do you run any special events?',
-                    a: `here is also a programme of special events for everyone from tiny tots to 
+                    a: `We have a programme of special events for everyone from tiny tots to 
                         avid train enthusiasts including Day Out With Thomas™ and Santa Steam Trains. `
                 }
             ]
