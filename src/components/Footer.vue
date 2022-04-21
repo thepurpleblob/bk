@@ -47,7 +47,7 @@
         </div>
 
         <ul class="mt-3 list-inline">
-            <li class="list-inline-item"><router-link class="link-light" to="/page/terms">Terms & conditions</router-link></li>
+            <li class="list-inline-item"><a href="https://bkrailway.digitickets.co.uk/pages/terms">Terms & conditions</a></li>
             <li class="list-inline-item"><router-link class="link-light" to="/page/dp">Data protection policy</router-link></li>
             <li class="list-inline-item"><router-link class="link-light" to="/page/company">Company details</router-link></li>
         </ul>

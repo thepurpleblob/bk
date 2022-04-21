@@ -18,7 +18,7 @@
                     <li>Adult - <strong>£13.00</strong></li>
                     <li>Senior (60+) - <strong>£12.00</strong></li>
                     <li>Child (5-15) - <strong>£7.00</strong></li>
-                    <li>Family (2 adults and up to 3 childred) - <strong>£36.00</strong></li>
+                    <li>Family (2 adults and up to 3 children) - <strong>£36.00</strong></li>
                     <li>Infants (under age 5)  - <strong>Free</strong> (but do not get a seat)</li>
                 </ul>
                 <p class="text-center">

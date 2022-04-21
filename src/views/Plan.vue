@@ -141,7 +141,7 @@ export default {
                     n: 'Two',
                     q: "Will it be a Steam Train or a Heritage Diesel Train?",
                     a: `Midweek trains are all steam-hauled. On Saturday and Sunday the first three trains
-                        are steam hauled and the fourth is heritage diesel-hauled.<br />
+                        are steam-hauled and the fourth is heritage diesel-hauled.<br />
                         *Note: Whilst every effort is made to run to the published timetable,
                         SRPS reserves the right to vary it and to use steam or diesel power without notice.`
                 },
@@ -183,7 +183,7 @@ export default {
                         until otherwise announced, in accordance with industry best practice and
                         guidance endorsed by the <a href="https://asva.co.uk/">Association of Scottish Visitor Attractions</a>.
                         <br /><br />
-                        As per the latest guidance from the Scottish Government, face coverings must be worn indoors,
+                        As per the latest guidance from the Scottish Government, face coverings are recommended indoors,
                         unless exempt or eating and drinking. This includes on trains and at Bo’ness Station.
                         It is also recommended they are worn in areas likely to be crowded, including queues.
                         <br /><br />
@@ -198,7 +198,8 @@ export default {
                     n: 'Six',
                     q: "Do infants count in the numbers for booking a table/compartment?",
                     a: `There is no actual ticket especially for infants. As far as our seating is concerned,
-                        a child under 5 would be able to sit on an adults knee and not need a seat.`
+                        a child under 5 would be able to sit on an adults knee and not need a seat.
+                        Please note this does not apply to special events which will differ in their infant policy.`
                 },
                 {
                     n: 'Seven',
@@ -208,7 +209,7 @@ export default {
                         At Manuel the train will stop for just over ten minutes* to allow the crew to move the
                         locomotive from one end of the train to the other to pull it back to Bo’ness.
                         At Manuel you are welcome to alight and enjoy the fresh air on our platform whilst this takes place.
-                        When it is time to get back on the Guard will blow their whistle and our staff
+                        When it is time to get back on, the Guard will blow their whistle and our staff
                         will let you know it’s time to get back on. 
                         (*Please note this may change due to operational needs)`
                 },
@@ -224,10 +225,12 @@ export default {
                     a: `Visitors can come to the Station to visit our shop and Station Buffet when we are running trains.
                         <br /><br />
                         Access to the platform is for passengers who have bought or wish to buy tickets for travel on our trains only.
-                        We ask that all passengers and visitors continue to wear a face covering,
+                        It is recommended that all passengers and visitors continue to wear a face covering,
                         unless exempt in line with our mitigation measures whilst at the Station,
                         Station Buffet, the train platforms, on trains (unless eating or drinking) and keep a
-                        safe distance from other visitors and follow marked routes.`
+                        safe distance from other visitors and follow marked routes.
+                        <br /><br />
+                        Please note site access may be limited at special events.`
                 },
                 {
                     n: 'Ten',
