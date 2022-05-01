@@ -107,7 +107,13 @@ export default {
                     this.loading = false;
                 }
                 catch(error)  {
-                    this.$router.push('/404');
+            const message = JSON.stringify(error, null, 2);
+                    v.$router.push({
+                        name: 'error404',
+                        params: {
+                            message: message
+                        }
+                    });
                 }
             }
             sendCalendarRequest();
@@ -140,8 +146,14 @@ export default {
                     }
                 );
             })
-            .catch(() => {
-                v.$router.push('/404');
+            .catch((error) => {
+                const message = JSON.stringify(error, null, 2);
+                v.$router.push({
+                    name: 'error404',
+                    params: {
+                        message: message
+                    }
+                });
             })
         },
         onDayclick: function(day) {

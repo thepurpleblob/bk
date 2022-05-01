@@ -5,6 +5,9 @@
         </div>
         <div class="alert alert-danger text-center">
             Something went wrong or this page cannot be found
+            <p v-if="message" class="text-start">
+                <b>Error:</b> <pre>{{ message }}</pre>
+            </p>
         </div>
     </div>
 </template>
@@ -13,5 +16,8 @@
 
 export default {
     name: 'Error404',
+    props: [
+        'message',
+    ]
 }
 </script>

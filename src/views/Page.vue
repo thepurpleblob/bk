@@ -60,8 +60,13 @@ export default {
                 v.loading = false;
             })
             .catch(error => {
-                v.$router.push('/404');
-                v.$log.error(error);
+                const message = JSON.stringify(error, null, 2);
+                v.$router.push({
+                    name: 'error404',
+                    params: {
+                        message: message
+                    }
+                });
             })
         }
     },

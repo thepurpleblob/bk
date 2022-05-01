@@ -34,6 +34,15 @@ export default {
             v.$log.debug(items);
             v.items = items;
         })
+        .catch((error) => {
+            const message = JSON.stringify(error, null, 2);
+            v.$router.push({
+                name: 'error404',
+                params: {
+                    message: message
+                }
+            });
+        })
     }
 }
 </script>

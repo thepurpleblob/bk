@@ -57,8 +57,9 @@ const routes = [
   },
   {
     path: '/404',
-    name: '404',
+    name: 'error404',
     component: Error404,
+    props: true,
   }
 ]
 
