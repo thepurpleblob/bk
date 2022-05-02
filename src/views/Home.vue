@@ -1,14 +1,6 @@
 <template>
     <div class="home container-fluid">
 
-        <div class="alert alert-danger">
-            <h3>URGENT NOTICE - Trains cancelled this weekend</h3>
-            <p>Due to operational reasons, all trains are cancelled on Saturday 30th April. Steam trains
-                will be cancelled on Sunday 1st May. Diesel services from 15:45 and the '37403 Running Night'
-                will run as planned on Sunday 1st. Please see the News page for full details.
-            </p>
-        </div>
-
 
         <Block
             heading="A Great Day Out - the old fashioned way"
