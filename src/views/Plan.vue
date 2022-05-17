@@ -17,6 +17,11 @@
                             Our friendly volunteers are waiting to  welcome you aboard and invite you the soak up the atmosphere
                             of our award-winning heritage railway through the sights, sounds and smells of yesteryear. 
                         </p>
+                        <div class="alert alert-warning">
+                            IMPORTANT NOTE: Unfortunately, our accessible carriage is out of service at present so wheelchairs
+                            cannot be accomodated either in a compartment or other carriage. We are really sorry for any 
+                            inconvenience and will have it back in service as soon as we can.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -274,6 +279,9 @@ export default {
                     a: `
                     <strong>IMPORTANT NOTE:</strong> Unfortunately our accessible carriage is out of service at present.
                     We are really sorry for any inconvenience and will have it back in service as soon as we can.<br />
+                    There is good disabled access to the station, the Station Buffet, the entertainment, the trains, the Museum
+                    of Scottish Railways and Engineering Workshop Viewing Gallery. There is also plenty of dedicated
+                    disabled parking at Bo'ness. A disabled toilet is also available at Bo'ness station.<br />
                     <a href="https://www.accessibilityguides.org/content/boness-kinneil-railway">Please see our accessibility statement.</a>`
                 },
                 {
