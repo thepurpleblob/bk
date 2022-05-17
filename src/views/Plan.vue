@@ -18,7 +18,7 @@
                             of our award-winning heritage railway through the sights, sounds and smells of yesteryear. 
                         </p>
                         <div class="alert alert-warning">
-                            IMPORTANT NOTE: Unfortunately, our accessible carriage is out of service at present so wheelchairs
+                            <b>IMPORTANT NOTE:</b> Unfortunately, our accessible carriage is out of service at present so wheelchairs
                             cannot be accomodated either in a compartment or other carriage. We are really sorry for any 
                             inconvenience and will have it back in service as soon as we can.
                         </div>
