@@ -37,6 +37,24 @@
                     <i>Special event fares apply -
                         <router-link to="events">Please see our Events page for further information</router-link></i>
                 </p>
+                <hr />
+                <h4>SEASON TICKETS</h4>
+                <p>
+                    Valid for one year from date of purchase giving unlimited train journeys and museum admission
+                    (<i>except some special events</i>).
+                    <br />
+                    Only available to purchase at the Booking Office at Bo'ness Station on days when trains are 
+                    running.
+                </p>
+                <ul>
+                    <li>Adult - <strong>£46.00</strong></li>
+                    <li>Senior (60+) - <strong>£42.00</strong></li>
+                    <li>Child (5-15) - <strong>£25.00</strong></li>
+                    <li>Family (2 adults and up to 3 children) - <strong>£110.00</strong></li>
+                </ul>
+                <p>
+                    <a href="./staticassets/SeasonTicket22.pdf" download>Download Season Ticket leaflet</a>
+                </p>
             </div>
         </div>
     </div>   
