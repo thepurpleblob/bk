@@ -2,13 +2,6 @@
     <div id="ThomasPage" class="home container">
         <h1>Day Out With Thomas - Dates, Prices and Tickets</h1>
 
-        <div class="alert alert-danger mt-4 mb-4">
-            <h2>SOLD OUT</h2>
-            <b>Tickets for Saturday 11 June and Sunday 12 June are sold out and there will be none available on the day.</b><br />
-            Only those who already have tickets should attend. <br />
-            <i>To control capacity limits, there is no access to any of the site including the trains, cafe, gift shop and Museum without a valid ticket for Day Out With Thomas.</i>
-        </div>
-
         <div class="row mb-2">
             <div class="col-12 col-sm-6">
                 <img class="img-fluid" src="~@/assets/DOWT1_scaled.jpg" alt="DOWT Family" />
