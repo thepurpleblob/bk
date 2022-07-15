@@ -76,6 +76,9 @@
                             your return train journey from Birkhill.
                         </p>
                         <p>
+                            <a href="./staticassets/Thomas2022.pdf" download>Download event programme.</a>
+                        </p>
+                        <p>
                             <i>*Exact details of entertainment subject to availability and change.</i>
                         </p>
                     </div>
