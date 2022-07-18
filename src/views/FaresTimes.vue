@@ -10,7 +10,7 @@
                             <span class="visually-hidden">Loading...</span>
                         </div>
                     </div>
-                    <v-calendar v-if="isPopulated && !loading" is-expanded :attributes="attributes" :firstDayOfWeek="2" color="blue" v-on:dayclick="onDayclick" v-on:update:from-page="toPage"></v-calendar>
+                    <v-date-picker v-if="isPopulated && !loading" is-expanded :attributes="attributes" :firstDayOfWeek="2" :min-date="new Date()" color="blue" v-on:dayclick="onDayclick" v-on:update:from-page="toPage"></v-date-picker>
                     <div v-if="!loading" class="row py-4">
                         <div v-for="label in labels" :key="label.title" class="col" @click.prevent="labelclicked(label.ttid, label.rawcolor)">
                             <a class="text-decoration-none text-dark" href="#"><span class="dot rounded-circle" :class="label.color"></span> {{ label.title }}</a>
@@ -90,13 +90,18 @@ export default {
                 try {
                     const response = await axios.get(url + '/Calendar?limit=-1');
                     const events = response.data.data;
+                    const today = new Date();
                     this.events = events;
                     v.attributes = [];
                     events.forEach(event => {
+                        const eventdate = new Date(event.date);
                         v.attributes.push({
                             key: event.id,
-                            highlight: event.Color,  // Boolean, String, Object
-                            dates: new Date(event.date),
+                            dates: eventdate,
+                            highlight: {
+                                color: event.Color,
+                                fillMode: eventdate < today ? 'light' : 'solid',
+                            },
                             customData: {
                                 ttid: event.Timetable,
                                 color: event.Color,
@@ -249,31 +254,39 @@ export default {
         background-color: #718096;
     }
 
+    .dot-red {
+        background-color: #e53e3e;
+    }
+
+    .dot-orange {
+        background-color: #dd6b20;
+    }
+
     .dot-yellow {
         background-color: #d69e2e;
     }
 
     .dot-green {
-        background-color: #198754;
+        background-color: #38a169;
     }
 
-    .dot-orange {
-        background-color: #fd7e14;
-    }
-
-    .dot-pink {
-        background-color: #d63384;
+    .dot-teal {
+        background-color: #319795;
     }
 
     .dot-blue {
-        background-color: #0d6efd;
+        background-color: #3182ce;
     }
 
-    .dot-red {
-        background-color: #c53030;
+    .dot-indigo {
+        background-color: #5a67d8;
     }
 
     .dot-purple {
-        background-color: #6f42c1;
+        background-color: #805ad5;
+    }   
+
+    .dot-pink {
+        background-color: #d53f8c;
     }
 </style>

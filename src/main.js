@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import VCalendar from 'v-calendar'
+import VDatePicker from 'v-calendar'
 import VModal from 'vue-js-modal'
 import VueLogger from 'vuejs-logger';
 //import 'bootstrap/dist/css/bootstrap.min.css'
@@ -42,6 +43,7 @@ Vue.use(VueLogger, {
 Vue.config.productionTip = false
 
 Vue.use(VCalendar)
+Vue.use(VDatePicker)
 Vue.use(VModal)
 
 new Vue({
