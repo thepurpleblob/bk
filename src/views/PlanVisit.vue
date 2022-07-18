@@ -124,7 +124,7 @@
 import FaresBlock from '../components/FaresBlock.vue';
 
 export default {
-    name: 'Plan',
+    name: 'PlanVisit',
     components: {
         FaresBlock,
     },

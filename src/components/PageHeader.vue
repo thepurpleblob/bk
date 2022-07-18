@@ -42,7 +42,7 @@
 
 <script>
     export default {
-        name: 'Header',
+        name: 'PageHeader',
         props: {
             
         },

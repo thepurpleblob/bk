@@ -130,7 +130,7 @@
 <script>
 
 export default {
-    name: 'Thomas',
+    name: 'ThomasEvent',
     components: {
       
     },

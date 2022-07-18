@@ -1,71 +1,49 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-//import Home from '../views/Home.vue'
-//import Page from '../views/Page.vue'
-//import Fares from '../views/Fares.vue'
-//import Plan from '../views/Plan.vue'
-//import Events from '../views/Events.vue'
-//import News from '../views/News.vue'
-//import Thomas from '../views/Thomas.vue'
-import Error404 from '../views/Error404.vue'
+import ErrorPage404 from '../views/ErrorPage404.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    //component: Home
-    component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    name: 'HomePage',
+    component: () => import(/* webpackChunkName: "home" */ '../views/HomePage.vue')
   },
   {
     path: '/page/:slug',
     name: 'Page',
-    //component: Page,
-    component: () => import(/* webpackChunkName: "page" */ '../views/Page.vue')
+    component: () => import(/* webpackChunkName: "page" */ '../views/PageOther.vue')
   },
   {
     path: '/fares',
-    name: 'Fares',
-    //component: Fares,
-    component: () => import(/* webpackChunkName: "fares" */ '../views/Fares.vue')
+    name: 'FaresTimes',
+    component: () => import(/* webpackChunkName: "fares" */ '../views/FaresTimes.vue')
   },
   {
     path: '/plan',
-    name: 'Plan',
-    //component: Plan,
-    component: () => import(/* webpackChunkName: "plan" */ '../views/Plan.vue')
+    name: 'PlanVisit',
+    component: () => import(/* webpackChunkName: "plan" */ '../views/PlanVisit.vue')
   },
   {
     path: '/news',
-    name: 'News',
-    //component: News,
-    component: () => import(/* webpackChunkName: "news" */ '../views/News.vue')
+    name: 'NewsItems',
+    component: () => import(/* webpackChunkName: "news" */ '../views/NewsItems.vue')
   },
   {
     path: '/events',
-    name: 'Events',
-    //component: Events,
-    component: () => import(/* webpackChunkName: "events" */ '../views/Events.vue')
+    name: 'EventsList',
+    component: () => import(/* webpackChunkName: "events" */ '../views/EventsList.vue')
   },
   {
     path: '/thomas',
-    name: 'Thomas',
-    //component: Thomas,
-    component: () => import(/* webpackChunkName: "thomas" */ '../views/Thomas.vue')
+    name: 'ThomasEvent',
+    component: () => import(/* webpackChunkName: "thomas" */ '../views/ThomasEvent.vue')
   },
   {
     path: '/404',
     name: 'error404',
-    component: Error404,
+    component: ErrorPage404,
     props: true,
   }
 ]

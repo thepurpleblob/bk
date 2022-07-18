@@ -33,7 +33,7 @@
 
 <script>
 export default {
-    name: 'Block',
+    name: 'LayoutBlock',
     props: [
         'heading',
         'routerlink',

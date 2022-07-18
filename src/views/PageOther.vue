@@ -20,7 +20,7 @@
 import axios from 'axios';
 
 export default {
-    name: 'Page',
+    name: 'PageOther',
     components: {
       
     },

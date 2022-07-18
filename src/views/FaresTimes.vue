@@ -31,7 +31,7 @@
 
 <script>
 import axios from 'axios';
-import Timetable from '../components/Timetable';
+import TimeTable from '../components/TimeTable';
 import FaresBlock from '../components/FaresBlock.vue';
 
 // Tidy up services data from Timetable
@@ -63,7 +63,7 @@ function format_services(services) {
 }
 
 export default {
-    name: 'Fares',
+    name: 'FaresTimes',
     components: {
     //    Timetable,
         FaresBlock,
@@ -130,7 +130,7 @@ export default {
                 const link = response.data.data.link;
 
                 v.$modal.show(
-                    Timetable,
+                    TimeTable,
                     {
                         services: format_services(services),
                         title: title,
@@ -166,7 +166,7 @@ export default {
                 }
             } else {
                 this.$modal.show(
-                    Timetable,
+                    TimeTable,
                     {
                         title: '',
                         color: '#000000',

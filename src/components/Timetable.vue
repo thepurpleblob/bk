@@ -109,7 +109,7 @@
 
 <script>
     export default {
-        name: 'Timetable',
+        name: 'TimeTable',
         props: {
             services: {
                 type: Array,

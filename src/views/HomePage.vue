@@ -2,7 +2,7 @@
     <div class="home container-fluid">
 
 
-        <Block
+        <LayoutBlock
             heading="A Great Day Out - the old fashioned way"
             routerlink="/plan"
             :image="require('@/assets/TicketTrial1.jpg')"
@@ -11,25 +11,25 @@
                 link: 'https://bkrailway.digitickets.co.uk',
                 style: 'width: 150px'
             }"
-        ></Block>
+        ></LayoutBlock>
 
-        <Block
+        <LayoutBlock
             heading="Fares and tickets"
             routerlink=""
             :image="require('@/assets/TicketOffice.jpg')"
             imageleft="true"
             :list="fareslist"
-        ></Block>
+        ></LayoutBlock>
     </div>
 </template>
 
 <script>
-import Block from '../components/Block.vue';
+import LayoutBlock from '../components/LayoutBlock.vue';
 
 export default {
-    name: 'Home',
+    name: 'HomePage',
     components: {
-        Block,
+        LayoutBlock,
     },
     data: function() {
         return {

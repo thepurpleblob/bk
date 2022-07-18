@@ -19,7 +19,7 @@
 import axios from 'axios';
 
 export default {
-    name: 'News',
+    name: 'NewsItems',
     data: function() {
         return {
             items: [],

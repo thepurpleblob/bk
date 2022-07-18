@@ -15,7 +15,7 @@
 <script>
 
 export default {
-    name: 'Error404',
+    name: 'ErrorPage404',
     props: [
         'message',
     ]

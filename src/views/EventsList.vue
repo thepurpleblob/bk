@@ -8,26 +8,26 @@
         </div>
 
         <div v-if="!loading">
-            <Block
+            <LayoutBlock
                 v-for="item in items" :key="item.id"
                 :heading="item.Title"
                 :content="item.Content"    
                 :routerlink="item.Page"
                 :image="item.imageurl"
                 :imageleft="item.isleft"
-            ></Block>
+            ></LayoutBlock>
         </div>
     </div>
 </template>
 
 <script>
 import axios from 'axios';
-import Block from '../components/Block.vue';
+import LayoutBlock from '../components/LayoutBlock.vue';
 
 export default {
-    name: 'Events',
+    name: 'EventsList',
     components: {
-        Block,
+        LayoutBlock,
     },
     data: function() {
         return {

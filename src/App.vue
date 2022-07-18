@@ -1,19 +1,19 @@
 <template>
   <div class="container p-0 p-xs-1" id="app">
-    <Header></Header>
+    <PageHeader></PageHeader>
     <router-view/>
-    <Footer></Footer>
+    <PageFooter></PageFooter>
   </div>
 </template>
 
 <script>
-    import Header from '@/components/Header.vue';
-    import Footer from '@/components/Footer.vue';
+    import PageHeader from '@/components/PageHeader.vue';
+    import PageFooter from '@/components/PageFooter.vue';
 
     export default {
       components: {
-          Header,
-          Footer,
+          PageHeader,
+          PageFooter,
       }
     }
 </script>
