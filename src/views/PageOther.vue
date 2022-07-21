@@ -74,7 +74,7 @@ export default {
         this.update();
     },
     watch: {
-        '$route': function() {
+        $route: function() {
             this.update();
         }
     },

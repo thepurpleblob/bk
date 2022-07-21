@@ -10,7 +10,7 @@
                             <span class="visually-hidden">Loading...</span>
                         </div>
                     </div>
-                    <v-date-picker v-if="isPopulated && !loading" is-expanded :attributes="attributes" :firstDayOfWeek="2" :min-date="new Date()" color="blue" v-on:dayclick="onDayclick" v-on:update:from-page="toPage"></v-date-picker>
+                    <v-calendar v-if="isPopulated && !loading" is-expanded :attributes="attributes" :firstDayOfWeek="2" :min-date="new Date()" color="blue" v-on:dayclick="onDayclick" v-on:update:from-page="toPage"></v-calendar>
                     <div v-if="!loading" class="row py-4">
                         <div v-for="label in labels" :key="label.title" class="col" @click.prevent="labelclicked(label.ttid, label.rawcolor)">
                             <a class="text-decoration-none text-dark" href="#"><span class="dot rounded-circle" :class="label.color"></span> {{ label.title }}</a>
@@ -188,7 +188,7 @@ export default {
         },
         toPage: function(page) {
             // (isPopulated is critical for this to be called with data)
-            this.$log.debug(this.events);
+            //this.$log.debug(this.events);
             const yearmonth = page.year.toString() + '-' + page.month.toString().padStart(2, '0');
             const labels = [];
             this.isEvents = false;
