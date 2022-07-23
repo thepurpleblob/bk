@@ -1,1 +1,6 @@
-https://cms.srps.org.uk/items/Notifications
+GET https://cms.srps.org.uk/items/Notifications HTTP/1.1
+
+###
+
+GET https://cms.srps.org.uk/items/faq_plan HTTP/1.1
+
