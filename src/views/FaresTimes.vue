@@ -90,7 +90,7 @@ export default {
                 try {
                     const response = await axios.get(url + '/Calendar?limit=-1');
                     const events = response.data.data;
-                    const today = new Date();
+                    //const today = new Date();
                     this.events = events;
                     v.attributes = [];
                     events.forEach(event => {
@@ -100,7 +100,8 @@ export default {
                             dates: eventdate,
                             highlight: {
                                 color: event.Color,
-                                fillMode: eventdate < today ? 'light' : 'solid',
+                                //fillMode: eventdate < today ? 'light' : 'solid',
+                                fillMode: 'solid',
                             },
                             customData: {
                                 ttid: event.Timetable,

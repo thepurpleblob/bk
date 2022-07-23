@@ -59,6 +59,8 @@
 
         <h2>More information</h2>
 
+
+        <LoadingCMS v-if="loading"></LoadingCMS>
         <div class="accordion mb-4" id="accordionFAQ">
             <div v-for="item in items" :key="item.id" class="accordion-item">
                 <h2 class="accordion-header" :id="'heading' + item.id">
@@ -122,12 +124,14 @@
 <script>
 //import axios from 'axios';
 import FaresBlock from '../components/FaresBlock.vue';
+import LoadingCMS from '../components/LoadingCMS.vue';
 import axios from 'axios';
 
 export default {
     name: 'PlanVisit',
     components: {
         FaresBlock,
+        LoadingCMS,
     },
     data: function() {
         return {
@@ -135,6 +139,7 @@ export default {
             content: '',
             blockstyle: '',
             items: [],
+            loading: true,
         }
     },
     methods: {
@@ -146,7 +151,7 @@ export default {
         axios.get(url + '/faq_plan')
         .then(response => {
             v.items = response.data.data;
-            window.console.log(v.items);
+            v.loading = false;
         });
     },
 }
