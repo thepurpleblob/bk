@@ -1,6 +1,7 @@
 <template>
     <div class="container-fluid">
         <h1>Latest News</h1>
+        <LoadingCMS v-if="loading"></LoadingCMS>
         <div class="card my-4" v-for="item in items" :key="item.id">
             <div class="card-body">
                 <h2 class="card-title">{{ item.Title }}</h2>
@@ -17,12 +18,17 @@
 
 <script>
 import axios from 'axios';
+import LoadingCMS from '../components/LoadingCMS.vue';
 
 export default {
     name: 'NewsItems',
+    components: {
+        LoadingCMS,
+    },
     data: function() {
         return {
             items: [],
+            loading: true,
         }
     },
     mounted: function() {
@@ -33,16 +39,11 @@ export default {
             const items = response.data.data;
             v.$log.debug(items);
             v.items = items;
+            v.loading = false;
         })
-        .catch((error) => {
-            const message = JSON.stringify(error, null, 2);
-            v.$router.push({
-                name: 'error404',
-                params: {
-                    message: message
-                }
-            });
-        })
+        .catch(err => {
+            v.$log.error(err);
+        });
     }
 }
 </script>

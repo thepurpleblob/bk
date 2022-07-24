@@ -83,43 +83,34 @@ export default {
 
             // Get event items
             const v = this;
-            const sendCalendarRequest = async() => {
-                try {
-                    const response = await axios.get(url + '/Calendar?limit=-1');
-                    const events = response.data.data;
-                    //const today = new Date();
-                    this.events = events;
-                    v.attributes = [];
-                    events.forEach(event => {
-                        const eventdate = new Date(event.date);
-                        v.attributes.push({
-                            key: event.id,
-                            dates: eventdate,
-                            highlight: {
-                                color: event.Color,
-                                //fillMode: eventdate < today ? 'light' : 'solid',
-                                fillMode: 'solid',
-                            },
-                            customData: {
-                                ttid: event.Timetable,
-                                color: event.Color,
-                            }
-                        });
-                    });
-                    this.isPopulated = true;
-                    this.loading = false;
-                }
-                catch(error)  {
-            const message = JSON.stringify(error, null, 2);
-                    v.$router.push({
-                        name: 'error404',
-                        params: {
-                            message: message
+            axios.get(url + '/Calendar?limit=-1')
+            .then(response => {
+                const events = response.data.data;
+                //const today = new Date();
+                this.events = events;
+                v.attributes = [];
+                events.forEach(event => {
+                    const eventdate = new Date(event.date);
+                    v.attributes.push({
+                        key: event.id,
+                        dates: eventdate,
+                        highlight: {
+                            color: event.Color,
+                            //fillMode: eventdate < today ? 'light' : 'solid',
+                            fillMode: 'solid',
+                        },
+                        customData: {
+                            ttid: event.Timetable,
+                            color: event.Color,
                         }
                     });
-                }
-            }
-            sendCalendarRequest();
+                });
+                this.isPopulated = true;
+                this.loading = false;
+            })
+            .catch(err => {
+                v.$log.error(err);
+            });
         },
         displayTimetable: function(ttid, color) {
             const url = process.env.VUE_APP_ENDPOINT;
@@ -149,15 +140,9 @@ export default {
                     }
                 );
             })
-            .catch((error) => {
-                const message = JSON.stringify(error, null, 2);
-                v.$router.push({
-                    name: 'error404',
-                    params: {
-                        message: message
-                    }
-                });
-            })
+            .catch(err => {
+                v.$log.error(err);
+            });
         },
         onDayclick: function(day) {
             //window.console.log(day);

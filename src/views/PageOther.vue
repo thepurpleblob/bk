@@ -56,16 +56,10 @@ export default {
                 }
                 v.loading = false;
             })
-            .catch(error => {
-                const message = JSON.stringify(error, null, 2);
-                v.$router.push({
-                    name: 'error404',
-                    params: {
-                        message: message
-                    }
-                });
-            })
-        }
+            .catch(err => {
+                v.$log.error(err);
+            });
+    }
     },
     mounted: function() {
         this.update();

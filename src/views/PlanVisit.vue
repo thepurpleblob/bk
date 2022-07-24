@@ -152,6 +152,9 @@ export default {
         .then(response => {
             v.items = response.data.data;
             v.loading = false;
+        })
+        .catch(err => {
+            v.$log.error(err);
         });
     },
 }
