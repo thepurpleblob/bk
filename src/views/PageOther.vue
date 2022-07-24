@@ -1,11 +1,7 @@
 <template>
     <div class="page py-2">
 
-        <div v-if="loading" class="d-flex justify-content-center">
-            <div class="spinner-border text-primary text-center my-4" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </div>
+        <LoadingCMS v-if="loading"></LoadingCMS>
 
         <div v-if="!loading">
             <div class="container-fluid">
@@ -18,11 +14,12 @@
 
 <script>
 import axios from 'axios';
+import LoadingCMS from '../components/LoadingCMS.vue';
 
 export default {
     name: 'PageOther',
     components: {
-      
+        LoadingCMS,
     },
     data: function() {
         return {
