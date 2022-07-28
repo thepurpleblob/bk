@@ -37,8 +37,7 @@ export default {
         axios.get(url + '/News?filter={ "status": { "_eq": "published" }}')
         .then(response => {
             const items = response.data.data;
-            v.$log.debug(items);
-            v.items = items;
+             v.items = items;
             v.loading = false;
         })
         .catch(err => {
@@ -47,3 +46,7 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+    @import '../style/gradients.css';
+</style>
