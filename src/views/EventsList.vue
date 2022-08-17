@@ -27,8 +27,8 @@ import LayoutBlock from '../components/LayoutBlock.vue';
 export default {
     name: 'EventsList',
     components: {
-        LayoutBlock,
-    },
+    LayoutBlock,
+},
     data: function() {
         return {
             loading: true,

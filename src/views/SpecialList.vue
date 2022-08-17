@@ -12,26 +12,29 @@
         </div>
 
         <div v-if="!loading">
-            <LayoutBlock
-                v-for="item in items" :key="item.id"
-                :heading="item.Title"
-                :content="item.Content"    
-                :routerlink="item.Page"
-                :image="item.imageurl"
-                :imageleft="item.isleft"
-            ></LayoutBlock>
+            <div class="row">
+                <div v-for="item in items" :key="item.id" class="col-12 col-sm-6 col-lg-4">
+                    <EventCard
+                        :title="item.Title"
+                        :image="item.imageurl"
+                        :content="item.Content"
+                        :routerlink="item.Page"
+                    ></EventCard>
+                </div>
+            </div>
         </div>
+
     </div>
 </template>
 
 <script>
 import axios from 'axios';
-import LayoutBlock from '../components/LayoutBlock.vue';
+import EventCard from '../components/EventCard.vue';
 
 export default {
     name: 'SpecialList',
     components: {
-        LayoutBlock,
+        EventCard,
     },
     data: function() {
         return {
