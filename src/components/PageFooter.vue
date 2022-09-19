@@ -25,6 +25,12 @@
                     </ul>
                 </div>
 
+                <div>
+                    <a class="link-light" href="https://bkrailway.us3.list-manage.com/subscribe?u=39208c212e4ffc9b9f7acd39a&id=5eaf26d110">
+                        To hear about our events and other news join our mailing list.
+                    </a>
+                </div>
+
                 <div id="footerlogos" class="text-begin">
                     <img class="image-fluid pt-4" id="tblogo" src="@/assets/TouristBoard.png" alt="Scottish Tourist Board Attraction"/>
                 </div>
@@ -48,7 +54,7 @@
         </div>
 
         <ul class="mt-3 list-inline">
-            <li class="list-inline-item"><a href="https://bkrailway.digitickets.co.uk/pages/terms">Terms & conditions</a></li>
+            <li class="list-inline-item"><a class="link-light" href="https://bkrailway.digitickets.co.uk/pages/terms">Terms & conditions</a></li>
             <li class="list-inline-item"><router-link class="link-light" to="/page/dp">Data protection policy</router-link></li>
             <li class="list-inline-item"><router-link class="link-light" to="/page/company">Company details</router-link></li>
         </ul>
