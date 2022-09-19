@@ -2,14 +2,19 @@
     <div class="container-fluid">
         <h1>Latest News</h1>
         <LoadingCMS v-if="loading"></LoadingCMS>
-        <div class="card my-4" v-for="item in items" :key="item.id">
-            <div class="card-body">
-                <h2 class="card-title">{{ item.Title }}</h2>
-                  <button class="btn btn-primary my-2" type="button" data-bs-toggle="collapse" :data-bs-target="'#collapse'+item.id" aria-expanded="false" :aria-controls="'collapse' + item.id">
-                      Show/hide
-                </button>
-                <div class="collapse" :id="'collapse' + item.id">
-                        <span v-html="item.Content"></span>
+
+        <div v-if="!loading">
+            <div class="row">
+                <div v-for="item in items" :key="item.id" class="col-12 col-sm-6 col-lg-4">
+                    <NewsCard
+                        :title="item.Title"
+                        :gradient="item.gradient"
+                        :image="assets + item.Image"
+                        :showimage="item.Image ? true : false"
+                        :intro="item.Intro"
+                        :content="item.Content"
+                        :routerlink="item.Page"
+                    ></NewsCard>
                 </div>
             </div>
         </div>
@@ -19,16 +24,19 @@
 <script>
 import axios from 'axios';
 import LoadingCMS from '../components/LoadingCMS.vue';
+import NewsCard from '../components/NewsCard.vue';
 
 export default {
     name: 'NewsItems',
     components: {
         LoadingCMS,
+        NewsCard,
     },
     data: function() {
         return {
             items: [],
             loading: true,
+            assets: process.env.VUE_APP_ASSETS + '/',
         }
     },
     mounted: function() {
@@ -37,7 +45,7 @@ export default {
         axios.get(url + '/News?filter={ "status": { "_eq": "published" }}')
         .then(response => {
             const items = response.data.data;
-             v.items = items;
+            v.items = items;
             v.loading = false;
         })
         .catch(err => {
