@@ -16,7 +16,10 @@
                         </div>
                     </div>
                     <div>
+                        <!--
                         <a href="./staticassets/Timetable2022.pdf" download>Download PDF timetable</a>
+                        -->
+                        <span class="text-primary">PDF of 2023 Timetable coming soon</span>
                     </div>
                 </div>
             </div>

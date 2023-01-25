@@ -18,9 +18,11 @@
                             of our award-winning heritage railway through the sights, sounds and smells of yesteryear. 
                         </p>
                         <div class="alert alert-warning">
-                            <b>IMPORTANT NOTE:</b> Unfortunately, our accessible carriage is out of service at present so wheelchairs
-                            cannot be accomodated either in a compartment or other carriage. We are really sorry for any 
-                            inconvenience and will have it back in service as soon as we can.
+                            <b>ACCESSIBILITY IMPORTANT INFO:</b> Our accessible carriage is available on most trains* and can
+                            accomodate wheelchairs. Wheelchairs cannot be accommodated in our compartments 
+                            due to their historic nature.
+                            <br /><br />
+                            <i>*not available for some special events. Please check Event page for details. </i>
                         </div>
                     </div>
                 </div>
