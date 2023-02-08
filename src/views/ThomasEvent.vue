@@ -18,7 +18,7 @@
         </div>
 
         <h2 class="text-center my-4">
-            We are delighted to welcome visitors to a Day Out With Thomas™ in 2022. 
+            We are delighted to welcome visitors to a Day Out With Thomas™ in 2023. 
         </h2>
 
         <div class="row mb-4">
@@ -30,7 +30,7 @@
                             <a href="https://www.quaytickets.com/dayoutwiththomas/en-GB/shows/day%20out%20with%20thomas%20at%20bo%27ness%20and%20kinneil%20railway/events"
                                 class="btn btn-outline-primary btn-lg">Purchase tickets</a>
                         </div>
-                        <p><b>The fare for anyone age 2 or over is £16* and must be pre-booked.</b></p>
+                        <p><b>The fare for anyone age 2 or over is £18* and must be pre-booked.</b></p>
  
                         <p>
                             Under 2s are free but will not be entitled to a seat, 
@@ -41,7 +41,7 @@
                             All entertainment and rides are covered by your ticket! See programme when available.
                         </p>
                         <p>
-                            This is a Premium Fare event which means discount vouchers including Tesco vouchers, 
+                            This is a Premium Fare event which means discount vouchers including  
                             complimentary tickets, Annual membership cards &amp; vouchers and other discount passes are not valid.
                         </p>
                         <p>
@@ -57,17 +57,19 @@
                     <div class="card-body">
                         <p><b>Look what’s included in your ticket!</b></p>
                         <ul>
-                            <li>Mini Shows with Rusty &amp; Dusty</li>
-                            <li>Thomas &amp; Friends Story telling</li>
-                            <li>Sing-a-longs with Rusty &amp; Dusty</li>
-                            <li>Imagination Station with Thomas &amp; Friends activities</li>
-                            <li>Museum of Scottish Railways</li>
-                            <li>Engineering Workshop Viewing Gallery</li>
+                            <li>A ride behind Thomas, a REAL steam engine!</li>
+                            <li>Take a photo with Percy</li>
+                            <li>Sing-a-longs and performances from Rusty &amp; Dusty and Sir Tophan Hatt</li>
+                            <li>Play Pod with with Thomas &amp; Friends activities</li>
+                            <li>Thomas &amp; Friends Themed Scavenger Hunt</li>
+                            <li>Thomas &amp; Friends Garden Games</li>
                             <li>Face painting</li>
-                            <li>Spot the character competition</li>
-                            <li>Miniature Railway rides</li>
-                            <li>Model Railway</li>
-                            <li>Exciting Thomas & Friends giveaways for every child</li>
+                            <li>Rides on the Miniature Railway</li>
+                            <li>Visit the Engineering Workshop Viewing Gallery</li>
+                            <li>Visit the Museum of Scottish Railways</li>
+                            <li>Visit the Model Railway</li>
+                            <li>Thomas &amp; Friends giveaways for every child</li>
+                            <li>Thomas &amp; Friends Gift Shop</li>
                         </ul>
                         <p>
                             If you have booked tickets for the afternoon it is advisable to enjoy
@@ -76,7 +78,8 @@
                             your return train journey from Birkhill.
                         </p>
                         <p>
-                            <a href="./staticassets/Thomas2022.pdf" download>Download event programme.</a>
+                            <!--<a href="./staticassets/Thomas2022.pdf" download>Download event programme.</a>-->
+                            Downloadable event programme coming soon.
                         </p>
                         <p>
                             <i>*Exact details of entertainment subject to availability and change.</i>
@@ -119,10 +122,10 @@
         </div>
 
         <div id="trademark">
-            <p><small>Day Out With Thomas ™ © 2022 Gullane (Thomas) Limited. Thomas &amp; Friends™ 
-            Based on The Railway Series by The Reverend W.Awdry. © 2022 Gullane (Thomas) Limited.</small></p> 
+            <p><small>Day Out With Thomas ™ © 2023 Gullane (Thomas) Limited. Thomas &amp; Friends™ 
+            Based on The Railway Series by The Reverend W.Awdry. © 2023 Gullane (Thomas) Limited.</small></p> 
             <p><small>Thomas the Tank Engine, Thomas &amp; Friends and Day Out With Thomas are trademarks of Gullane (Thomas) Limited. 
-                ©2022 Mattel. All rights reserved. ® and ™ designate U.S. trademarks of Mattel, except as noted.</small></p>
+                ©2023 Mattel. All rights reserved. ® and ™ designate U.S. trademarks of Mattel, except as noted.</small></p>
         </div>
     </div>
 </template>
@@ -164,8 +167,16 @@ export default {
                     n: "Five",
                     q: "What time should I plan to arrive?",
                     a: `Activities are available to visitors from 09:30 until 16:30.
-                        Please arrive at least 15 minutes before your pre-booked time slot. (this is printed on your e-ticket).`
+                        Please arrive at least 30 minutes before your pre-booked time slot. (this is printed on your e-ticket).`
                 },
+                {
+                    n: "FiveA",
+                    q: "Do you have parking?",
+                    a: `There is a large, free car park at Bo'ness Station with dedicated accessible spaces in front of the station.
+                        It does get busy quickly, though, and alternative free parking can be found in Union Street (EH51 9AA),
+                        Seaview Place (EH51 0AJ) and Register Street (EH51 9AA). All car parks are around a 5-10 minute walk to
+                        Bo'ness Station so please allow plenty of time for parking and getting to the event`,
+                },                
                 {
                     n: "Six",
                     q: "Can I bring my dog?",
@@ -218,8 +229,6 @@ export default {
                     q: "What’s the difference between Standard Seats and Private Compartments?",
                     a: `Standard Seats are arranged in 4s, usually with a table in the middle.
                         They are in carriages that you will share with other visitors.
-                        Perspex screens are provided between each set of 4 seats however social distancing is not
-                        planned unless the Scottish Government guidance changes.
                         Private Compartments are separate areas of the train which can seat up to 6 people.
                         These are sold as one ticket and are ideal for large groups.`
                 },
@@ -252,17 +261,11 @@ export default {
                         contact Bo’ness & Kinneil directly on <a href="tel:01506825855">01506 825855</a> to discuss suitability.`
                 },
                 {
-                    n: "Eighteen",
-                    q: "What is your Covid-19 policy?",
-                    a: `We continue to monitor Scottish Government guidelines and will provide visitors
-                        with up-to-date information closer to the event.`
-                },
-                {
                     n: "Nineteen",
                     q: "Is Thomas at your railway all the time?",
                     a: `We are open for much of the year (see our Prices & Timetables) and run a steam and diesel service.
-                        However we are pleased to say that 2022 dates for Day Out With Thomas are Saturday 11 & Sunday 12 June
-                        and Saturday 23 & Sunday 24 July. At other times Thomas can be found being a really useful engine at other railways.
+                        However we are pleased to say that 2023 dates for Day Out With Thomas are Saturday 13 & Sunday 14 May,
+                        Saturday 15 & Sunday 26 July and Saturday 9 & Sunday 10 September. At other times Thomas can be found being a really useful engine at other railways.
                         You can find out where by visiting <a href="https://www.dayoutwiththomas.co.uk">www.dayoutwiththomas.co.uk</a>.`
                 }
             ],
