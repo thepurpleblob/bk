@@ -4,9 +4,7 @@
         <div class="alert alert-danger">
             <h3>CANCELLED SERVICES</h3>
 
-            <p>All services on Saturday 1st April, Sunday 2nd April and Tuesday 4th April have been cancelled. This is due to unforeseen operational
-            difficulties.</p>
-            <p>The railway will still be opened as planned. All our other amenities will still be available.</p>
+            <p>Due to a carriage fault, we are unable to operate trains on Saturday 1st, Sunday 2nd and Tuesday 4th April. Pre-booked ticket holders will be refunded. The Museum of Scottish Railways will still be open on these dates and our engineers are working hard to enable us to resume services from Wednesday 5th April.</p>
             <p>We're sorry for any inconvenience or disappointment</p> 
         </div>
 
