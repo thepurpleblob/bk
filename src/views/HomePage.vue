@@ -1,6 +1,14 @@
 <template>
     <div class="home container-fluid">
 
+        <div class="alert alert-danger">
+            <h3>CANCELLED SERVICES</h3>
+
+            <p>All services on Saturday 1st April, Sunday 2nd April and Tuesday 4th April have been cancelled. This is due to unforeseen operational
+            difficulties.</p>
+            <p>The railway will still be opened as planned. All our other amenities will still be available.</p>
+            <p>We're sorry for any inconvenience or disappointment</p> 
+        </div>
 
         <LayoutBlock
             heading="A Great Day Out - the old fashioned way"
