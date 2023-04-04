@@ -1,12 +1,14 @@
 <template>
     <div class="home container-fluid">
 
+        <!--
         <div class="alert alert-danger">
             <h3>CANCELLED SERVICES</h3>
 
             <p>Due to a carriage fault, we are unable to operate trains on Saturday 1st, Sunday 2nd and Tuesday 4th April. Pre-booked ticket holders will be refunded. The Museum of Scottish Railways will still be open on these dates and our engineers are working hard to enable us to resume services from Wednesday 5th April.</p>
             <p>We're sorry for any inconvenience or disappointment</p> 
         </div>
+        -->
 
         <LayoutBlock
             heading="A Great Day Out - the old fashioned way"
