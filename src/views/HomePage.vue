@@ -1,14 +1,18 @@
 <template>
     <div class="home container-fluid">
 
-        <!--
         <div class="alert alert-danger">
-            <h3>CANCELLED SERVICES</h3>
+            <h3>NO TRAINS Tuesday 11th April 2023</h3>
 
-            <p>Due to a carriage fault, we are unable to operate trains on Saturday 1st, Sunday 2nd and Tuesday 4th April. Pre-booked ticket holders will be refunded. The Museum of Scottish Railways will still be open on these dates and our engineers are working hard to enable us to resume services from Wednesday 5th April.</p>
+            <p>
+                Due to a fault with our steam locomotive, we are unable to operate trains today Tuesday 11th April.
+                Pre-booked ticket holders are being contacted.
+                Our Museum of Scottish Railways, Visitor Trail, Gift Shop & Station Buffet will still be open.
+                Our engineers are working hard to enable us to resume services tomorrow, Wednesday 12th April.
+            </p>
+
             <p>We're sorry for any inconvenience or disappointment</p> 
         </div>
-        -->
 
         <LayoutBlock
             heading="A Great Day Out - the old fashioned way"
