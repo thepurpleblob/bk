@@ -1,7 +1,7 @@
 <template>
     <div class="home container-fluid">
 
-        <div class="alert alert-danger">
+        <div v-if="false" class="alert alert-danger">
             <h3>NO TRAINS Tuesday 11th April 2023</h3>
 
             <p>
