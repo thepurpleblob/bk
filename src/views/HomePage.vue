@@ -1,9 +1,7 @@
 <template>
     <div class="home container-fluid">
 
-        <div v-if="false" class="alert alert-danger">
-            <h3>NO TRAINS Tuesday 11th April 2023</h3>
-
+        <div v-if="true" class="alert alert-danger">
             <p>
                 Due to an ongoing fault with our credit/debit card machine at the Booking Office, Bo'ness Railway Station, it would
                 be advisable to pre-book tickets in advance, if possible. If you're buying tickets on the day, please bring cash
