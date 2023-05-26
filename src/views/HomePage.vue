@@ -5,10 +5,9 @@
             <h3>NO TRAINS Tuesday 11th April 2023</h3>
 
             <p>
-                Due to a fault with our steam locomotive, we are unable to operate trains today Tuesday 11th April.
-                Pre-booked ticket holders are being contacted.
-                Our Museum of Scottish Railways, Visitor Trail, Gift Shop & Station Buffet will still be open.
-                Our engineers are working hard to enable us to resume services tomorrow, Wednesday 12th April.
+                Due to an ongoing fault with our credit/debit card machine at the Booking Office, Bo'ness Railway Station, it would
+                be advisable to pre-book tickets in advance, if possible. If you're buying tickets on the day, please bring cash
+                with you. The nearest cash machine is at Tesco, a 5 minute walk from the station.
             </p>
 
             <p>We're sorry for any inconvenience or disappointment</p> 
