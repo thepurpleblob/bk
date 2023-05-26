@@ -7,8 +7,6 @@
                 be advisable to pre-book tickets in advance, if possible. If you're buying tickets on the day, please bring cash
                 with you. The nearest cash machine is at Tesco, a 5 minute walk from the station.
             </p>
-
-            <p>We're sorry for any inconvenience or disappointment</p> 
         </div>
 
         <LayoutBlock
