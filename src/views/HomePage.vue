@@ -1,11 +1,11 @@
 <template>
     <div class="home container-fluid">
 
-        <div v-if="false" class="alert alert-danger">
+        <div v-if="true" class="alert alert-danger mt-2">
             <p>
-                Due to an ongoing fault with our credit/debit card machine at the Booking Office, Bo'ness Railway Station, it would
-                be advisable to pre-book tickets in advance, if possible. If you're buying tickets on the day, please bring cash
-                with you. The nearest cash machine is at Tesco, a 5 minute walk from the station.
+                <b>NOTICE</b><br />
+		Our accessible coach will not be available this weekend, the 8th and 9th July. This is due to essential maintenance work<br />
+		We are sorry for any inconvenience this causes. 
             </p>
         </div>
 
