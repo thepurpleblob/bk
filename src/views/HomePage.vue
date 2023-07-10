@@ -1,7 +1,7 @@
 <template>
     <div class="home container-fluid">
 
-        <div v-if="true" class="alert alert-danger mt-2">
+        <div v-if="false" class="alert alert-danger mt-2">
             <p>
                 <b>NOTICE</b><br />
 		Our accessible coach will not be available this weekend, the 8th and 9th July. This is due to essential maintenance work<br />
