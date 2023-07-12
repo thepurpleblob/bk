@@ -78,8 +78,8 @@
                             your return train journey from Birkhill.
                         </p>
                         <p>
-                            <a href="https://cms.srps.org.uk/assets/40321730-1810-4c4b-88f9-a4ab4946728f.pdf" download>Download event programme.</a>-->
-                            Downloadable event programme coming soon.
+                            <a href="https://cms.srps.org.uk/assets/40321730-1810-4c4b-88f9-a4ab4946728f.pdf" download="DOWT July Event Prog 2023.pdf">Download event programme.</a>
+                            <!-- Downloadable event programme coming soon. -->
                         </p>
                         <p>
                             <i>*Exact details of entertainment subject to availability and change.</i>
